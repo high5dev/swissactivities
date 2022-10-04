@@ -1,0 +1,129 @@
+
+.contactForm {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #E5E5E5;
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 512px) {
+    border-radius: 0;
+    padding: 28px 24px 20px;
+  }
+  .icon {
+    img {
+      object-fit: contain;
+    }
+  }
+  .title {
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3b3b3b;
+    padding: 15px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      @media (max-width: 512px) {
+        font-size: 14px;
+      }
+    }
+
+    @media(max-width: 840px) {
+      text-align: center;
+    }
+    @media (max-width: 512px) {
+      padding: 0;
+      font-size: 20px;
+    }
+  }
+
+  .control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+
+    .whiteButton {
+      background: #fff;
+      color: #FE504F;
+
+      &:hover {
+        color: #EE403F;
+      }
+    }
+
+    @media (max-width: 840px) {
+      width: 100%;
+      height: 100px;
+      max-width: 400px;
+      margin: 20px auto 0;
+    }
+  }
+}
+
+.modal {
+  padding: 0;
+  @media (max-width: 512px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalContainer{
+    padding: 24px 34px;
+    max-height: 680px;
+    height: auto;
+    width: 550px;
+
+    @media (max-width: 512px) {
+      width: 100%;
+      height: 100%;
+      padding: 12px 12px;
+      max-height: none;
+      border-radius: 0;
+      overflow-y: auto;
+    }
+    @media (max-width: 350px) {
+      padding: 12px;
+    }
+  }
+
+  .header {
+    text-align: right;
+    line-height: 1;
+    .close {
+      background: none;
+      border: none;
+      border-radius: 0;
+      color: #828282;
+      cursor: pointer;
+      display: block;
+      font-size: 28px;
+      height: 24px;
+      padding: 0;
+      margin-left: auto;
+
+      &:hover {
+        color: #3b3b3b;
+      }
+    }
+
+  }
+}
+.modalBody {
+  padding: 12px;
+  @media (max-width: 350px) {
+    padding: 12px 0 0;
+  }
+}
+

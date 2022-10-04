@@ -1,0 +1,95 @@
+@import "mixins";
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  @media(max-width: 768px) {
+    margin-bottom: 15px;
+  }
+
+  .ticketDescription {
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+  }
+  .ticketLabel {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+
+    @media(max-width: 768px) {
+      font-size: 14px;
+      margin-right: 0;
+      white-space: initial;
+    }
+
+    .additionalInfo {
+      font-size: 14px;
+      @media(max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .ticketDescriptionLeft {
+    // width: 100%;
+    margin-right: 20px;
+    min-width: 0;
+    display: flex;
+  }
+  .price {
+    color: black;
+    font-weight: 400;
+    white-space: nowrap;
+
+    @include mobile() {
+      font-size: 14px;
+    }
+  }
+  .ticketAmountBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 2px 6px;
+
+    @media(max-width: 768px) {
+      padding: 0 5px;
+      margin-left: 10px;
+    }
+  }
+  .ticketAmount {
+    margin: 0 10px;
+    min-width: 15px;
+    text-align: center;
+    font-size: 16px;
+    @media(max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  .amountButton {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    padding: 8px;
+    background: none;
+    color: #3B3B3B;
+    border: none;
+    @media(max-width: 768px) {
+      font-size: 16px;
+      padding: 4px;
+  }
+
+    @media(max-width: 768px) {
+      margin-top: 5px;
+
+    }
+  }
+}

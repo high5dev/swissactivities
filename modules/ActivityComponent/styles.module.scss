@@ -1,0 +1,118 @@
+.activityContainer {
+  max-width: 306px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.11);
+  margin: 9px 14px;
+  padding: 24px;
+  &:hover {
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%), 0 2px 2px rgb(0 0 0 / 5%), 0 4px 4px rgb(0 0 0 / 5%), 0 6px 8px rgb(0 0 0 / 5%), 0 8px 16px rgb(0 0 0 / 5%);
+  }
+  .activityItemHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 165px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    img {
+      transition: all .2s ease-in-out;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .favorite {
+      position: absolute;
+      padding: 10px 9px 8px;
+      background: #FFF;
+      border-radius: 25px;
+      right: 5px;
+      top: 5px;
+      cursor: pointer;
+    }
+  }
+  .activityDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #3B3B3B;
+    padding: 12px;
+    justify-content: space-between;
+    height: calc(100% - 165px);
+    .activityTitle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      line-height: 27px;
+      font-size: 18px;
+      font-weight: 500;
+      a {
+        color:#363636;
+      }
+    }
+    .shortDescription {
+      .activityType {
+        width: 100%;
+      }
+      color: #828282;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      span {
+        color: #FE504F;
+        cursor: pointer;
+      }
+    }
+  }
+  .activityFooter {
+    width: 100%;
+    .footerLeft {
+      width: 100%;
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+      .divider {
+        width: 1px;
+        height: 30px;
+        background-color: #C4C4C4;
+      }
+      .from {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+        color: #828282;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 27px;
+        span {
+          color: #828282;
+        }
+        b {
+          margin-left: 18px;
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .currency, .price {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 600;
+        color: #FE504F;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.errorModal {
+  width: 95%;
+  .errorModalContainer {
+    height: 150px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+.errorHeader {
+  text-align: right;
+  height: 27px;
+  .errorClose {
+    height: 27px;
+    width: 27px;
+    background: none;
+    border: none;
+    padding: 0;
+
+  svg {
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+  }
+}
+}
+.errorBox{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 0 20px 50px;
+}
+
+.tilecontent {
+  line-height: 1;
+  font-size: 0.8em;
+}

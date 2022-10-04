@@ -1,0 +1,135 @@
+.sectionHeader {
+  text-align: center;
+  padding-top: var(--h-header);
+}
+
+.legalBody {
+  padding-top: 40px;
+
+  & > div{
+    flex-direction: row;
+
+    @media (max-width: 512px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 512px) {
+    padding: 30px 16px;
+    background-color: #fff;
+  }
+
+  .legalSidebar {
+    padding-right: 24px;
+    max-width: 350px;
+    min-width: 300px;
+
+    @media (max-width: 512px) {
+      padding-right: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      width: 100%;
+      position: sticky;
+      top: 135px;
+
+      li {
+        padding: 10px 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+
+
+      @media (max-width: 512px) {
+        border: unset;
+        padding: 0;
+        position: static;
+        top: unset;
+
+        li{
+          margin: 0;
+          padding: 8px 0;
+        }
+      }
+    }
+  }
+  .legalContent {
+
+    padding-bottom: 40px;
+
+    @media (max-width: 512px) {
+      padding-top: 30px;
+    }
+    .legalItemHead {
+      font-weight: 600;
+      font-size: 24px;
+      color: #003049;
+      padding: 10px 0;
+      border-bottom: 1px solid #003049;
+
+      @media (max-width: 512px) {
+        padding: 10px 0;
+      }
+    }
+    .legalItemBody {
+      padding-top: 24px;
+      font-size: 16px;
+
+      a{
+        word-break: break-all;
+      }
+
+      @media (max-width: 512px) {
+        padding: 24px 0;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 48px;
+        font-weight: 600;
+
+        @media (max-width: 512px) {
+          font-size: 22px;
+          margin: 10px 0;
+          line-height: 1.8;
+        }
+
+      }
+      p {
+        font-size: 18px;
+        line-height: 33px;
+        @media (max-width: 512px) {
+          padding: 0;
+          font-size: 16px;
+          line-height: 1.9;
+        }
+      }
+      ul, ol {
+        padding-left: 50px;
+
+        @media (max-width: 512px) {
+          padding-left: 30px;
+        }
+        li {
+          font-size: 18px;
+          line-height: 36px;
+
+          @media (max-width: 512px) {
+            font-size: 16px;
+            line-height: 1.9;
+          }
+        }
+      }
+      ul {
+        li {
+          list-style: disc;
+        }
+      }
+    }
+  }
+}

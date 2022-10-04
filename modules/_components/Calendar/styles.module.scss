@@ -1,0 +1,25 @@
+@import "../styles/mixins";
+
+.reactCalendar {
+  box-shadow: none;
+  padding: 0;
+  margin: 0 !important;
+  border: none;
+  display: none;
+
+  @include mobile() {
+    display: block;
+  }
+
+  .tilePrice {
+    font-size: 8px !important;
+    color: #828282;
+    margin: 0 !important;
+  }
+}
+
+.navBtns {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+}

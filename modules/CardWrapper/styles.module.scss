@@ -1,0 +1,38 @@
+
+.wrapper {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%), 0 2px 2px rgb(0 0 0 / 5%), 0 4px 4px rgb(0 0 0 / 5%), 0 6px 8px rgb(0 0 0 / 5%), 0 8px 16px rgb(0 0 0 / 5%);
+  transition: transform .13s ease-in-out,-webkit-transform .13s ease-in-out;
+  transform: translateZ(0);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: .5rem;
+    box-shadow: 0 4px 2px rgb(0 0 0 / 5%), 0 8px 4px rgb(0 0 0 / 5%), 0 16px 8px rgb(0 0 0 / 5%);
+    transition: opacity .2s ease-in-out;
+  }
+
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    -webkit-transform: translate3d(0,-.25rem,0);
+    transform: translate3d(0,-.25rem,0);
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus-within{
+    &:after {
+      opacity: 1;
+    }
+  }
+}

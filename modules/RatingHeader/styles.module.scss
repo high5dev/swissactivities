@@ -1,0 +1,169 @@
+@import "mixins";
+
+.mainHeaderContainer {
+  // text-align: center;
+
+
+  @include tablet-activity {
+    margin-top: 0;
+    position: relative;
+  }
+
+  @include mobile() {
+    padding: 0 16px;
+  }
+
+  .sectionTitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 1.5;
+    margin: 0 0 8px;
+    h1 {
+      color: #3b3b3b;
+      font-weight: 600;
+      font-size: 30px;
+      text-align: left;
+
+      @include mobile() {
+        color: #626262;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 700;
+      }
+    }
+    @include mobile() {
+      margin-top: 20px;
+    }
+  }
+  .sectionSubTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: RGBA(102, 102, 102, 1);
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      text-align: left;
+    }
+  }
+}
+
+.sectionStickyHeader {
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  padding-top: 0;
+  width: 100%;
+  margin-top: 0;
+  background: #002f49;
+  box-shadow: 0px 0px 8px RGBA(0, 0, 0, 0.2);
+  color: white;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0;
+  animation: rollingTop 0.15s linear;
+
+  @include mobile() {
+    top: auto;
+    bottom: 0;
+    animation: rollingBottom 0.15s linear;
+    padding: 16px;
+    min-height: 50px;
+    background: #ffffff;
+  }
+
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    @include tablet-activity() {
+      flex-direction: column;
+      padding-bottom: 0;
+    }
+  }
+  .sectionTitle {
+    h1, h2 {
+      color: white;
+      line-height: 1.5;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .sectionSubTitle {
+    padding: 5px 0;
+    span {
+      line-height: 1.25;
+      color: white;
+      font-size: 14px;
+    }
+    // @include mobile() {
+    //   display: none;
+    // }
+  }
+  .sectionRating {
+    .type {
+      li {
+        color: #FE504F;
+      }
+    }
+  }
+  .priceForm{
+    display: none;
+    @include mobile() {
+      display: block;
+    }
+    p:first-child{
+      font-size: 12px;
+      color: #828282;
+      line-height: 18px;
+      font-weight: 500;
+      text-align: left;
+    }
+    p:last-child{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #000;
+    }
+  }
+}
+
+.sectionHeader {
+    .sectionTitle {
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // flex-direction: row;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+
+      .weather {
+        display: none;
+      }
+    }
+  }
+
+  .sectionSubTitle {
+  }
+
+  @include mobile() {
+    padding-top: 65px;
+  }
+}
+.bottom {
+  display: flex;
+}
+.controlWrapper {
+  margin-left: auto;
+}

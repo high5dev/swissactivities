@@ -1,0 +1,112 @@
+@import "mixins";
+
+.emailSubscription {
+  width: 100%;
+  margin: 8px auto 24px;
+  flex-direction: column;
+
+  @media(max-width: 1440px){
+    max-width: 1280px;
+  }
+  @include mobile() {
+    padding: 40px 16px;
+  }
+
+  .subCard {
+    background: #e5f6ff;
+    border-radius: 16px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    line-height: 1.5;
+
+    @include tablet() {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .subForm {
+    display: flex;
+    color: #3b3b3b;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    width: 60%;
+
+    @include tablet() {
+      width: 100%;
+    }
+    @include mobile() {
+      padding: 16px;
+    }
+
+  }
+  .title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .description {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .inputBlock {
+    width: 100%;
+    display: flex;
+
+    @include mobile() {
+      flex-direction: column;
+      margin-top: 24px;
+    }
+  }
+  .input {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 10px 16px;
+    flex-grow: 1;
+  }
+  .submit {
+    background: #FF385C;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    flex-grow: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 24px;
+    margin-left: 24px;
+    @include mobile() {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .imageWrapper {
+    min-height: 320px;
+    width: 40%;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    @include tablet() {
+      min-height: 120px;
+      height: 120px;
+      max-height: 120px;
+      width: 100%;
+      span {
+        width: 100% !important;
+      }
+    }
+
+  }
+  .hint {
+    color: #828282;
+    font-size: 14px;
+    padding-top: 4px;
+  }
+}

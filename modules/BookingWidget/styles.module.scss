@@ -1,0 +1,525 @@
+@import "mixins";
+
+.BookingWidget {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-height: 635px;
+
+  @include mobile() {
+    min-height: 10px;
+  }
+
+  .scrollAnchor {
+    position: absolute;
+    top: -100px;
+
+    @include mobile() {
+      top: -60px;
+    }
+  }
+
+  .checkoutHeader {
+    width: 100%;
+    background-color: #002f49;
+    color: #fff;
+    padding: 15px;
+    justify-content: space-between;
+    @include mobile() {
+      padding: 10px;
+      .checkAvailabilityButton {
+        margin-top: 20px;
+      }
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      display: none;
+
+      @include mobile() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1px solid #E5E5E5;
+      }
+    }
+
+    .widgetNavigation {
+      display: flex;
+
+      @include mobile() {
+        flex-direction: column;
+      }
+
+      .widgetNavItem {
+
+        color: #1b2b49;
+        font-weight: 500;
+        font-size: 16px;
+        width: 100%;
+        min-width: 20%;
+        padding: 5px 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        border-radius: 4px;
+        border: 0;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        @include mobile() {
+          margin: 5px 0;
+          white-space: nowrap;
+        }
+
+        @include desktop() {
+          &.inactive {
+            background-color: #dcdcdc;
+            color: #273247;
+          }
+          &.active {
+            box-shadow: 0 0 5px 0.5px #222;
+            .chevron {
+              transform: rotate(90deg);
+              font-size: 22px;
+            }
+          }
+        }
+
+        .chevron {
+          transition: transform 0.3s, font-size 0.3s;
+          min-width: 20px;
+        }
+
+        .navSelectedTickets {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+          text-align: left;
+          display: block;
+        }
+
+        svg {
+          color: #1b2b49;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include mobile(){
+            justify-content: flex-start;
+            width: 100%;
+            max-width: calc(100% - 20px);
+          }
+        }
+
+        .widgetNavItemIcon {
+          margin-right: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .calendarFooter {
+    margin-top: 10px;
+    padding: 0 15px 20px;
+    // flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &.basket {
+      flex-grow: 1;
+    }
+
+    @include mobile() {
+      margin-top: 5px;
+      padding-bottom: 5px;
+      padding: 0 10px 10px;
+      margin: 5px 5px 0px 5px;
+      border: 3px solid #828282;
+
+      &.inactive {
+        display: none;
+      }
+    }
+    @media (max-width: 350px) {
+      margin-top: 10px;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 5px;
+      width: 100%;
+
+      p {
+        white-space: nowrap;
+      }
+
+      .totalLabel {
+        font-size: 16px;
+        font-weight: 600;
+        width: 65%;
+        @include mobile() {
+          width: 100%;
+          padding: 5px 0;
+          border-bottom: 1px solid #e5e5e5;
+
+        }
+      }
+
+      .totalValueLabel {
+        color: #828282;
+        font-size: 14px;
+
+        @include mobile() {
+          display: none;
+        }
+      }
+
+      .totalPrice{
+        text-align: right;
+        line-height: 1.4;
+      }
+
+      .totalValueLabelMobile {
+        color: #828282;
+        font-size: 14px;
+        @include desktop() {
+          display: none;
+        }
+      }
+      .totalTaxes {
+        color: #019101;
+        font-size: 12px;
+        white-space: normal;
+        // @include desktop() {
+        //   display: none;
+        // }
+      }
+
+
+
+      .totalValue {
+        font-size: 18px;
+        font-weight: 600;
+        min-width: 120px;
+        color: #3B3B3B;
+
+        @include mobile() {
+          width: auto;
+          font-size: 18px;
+        }
+      }
+
+      .selectedTickets {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-right: -10px;
+        margin-bottom: 10px;
+
+        @include mobile() {
+          margin-top: 0;
+
+        }
+      }
+
+      .totalTickets {
+        width: 100%;
+        font-size: 14px;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        margin: 3px 0;
+        padding-right: 10px;
+        color: #3B3B3B;
+
+        @include mobile() {
+          font-weight: 400;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .totalTicketsName {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0 5px;
+      }
+    }
+
+    .totalTitle {
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    .mobileTitle {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+  }
+
+  .checkoutButton {
+    display: flex;
+  }
+  .totalPriceMobile {
+    display: none;
+    .totalValue {
+      font-size: 18px;
+      font-weight: 600;
+      color: #FE504F;
+      width: 120px;
+    }
+    @include mobile() {
+      display: block;
+    }
+  }
+
+  .totalWrapper {
+    display: flex;
+
+    .totalTeaser {
+      position: relative;
+      width: 200px;
+      max-width: 30%;
+      margin-right: 10px;
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      @include mobile() {
+        display: none;
+      }
+
+      .totalTeaserImage {
+        border-radius: 4px;
+        overflow: hidden;
+      }
+    }
+    .total {
+      padding-top: 10px;
+      min-height: 40px;
+      flex-direction: column-reverse;
+
+      .totalRow {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .mobileInfoCard {
+        display: block;
+        width: 80%;
+
+        p {
+          margin-bottom: 5px;
+          font-size: 14px;
+          white-space: normal;
+        }
+
+        .offerInfo {
+          width: 100%;
+          display: flex;
+          .label{
+            flex-shrink: 0;
+          }
+          .value {
+            flex-grow: 0;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottomButtons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+}
+
+.checkAvailabilityButton {
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100%;
+  padding: 8px 0;
+
+  @include mobile() {
+    border-radius: 2px;
+  }
+}
+
+.payLater {
+  composes: checkAvailabilityButton;
+  background: #fff;
+  color: #ff385c;
+  margin-bottom: 10px;
+}
+
+.paymentTitle {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 5;
+}
+
+.mobileClose {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.close {
+  text-align: end;
+  cursor: pointer;
+}
+
+.offerHelper {
+  color: #0c0404;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.payLaterHint {
+  margin-top: 20px;
+  padding-top: 5px;
+  font-size: 16px;
+
+
+  @include mobile() {
+    line-height: 20px;
+    font-size: 14px;
+    font-color: white;
+  }
+
+  mark {
+    background: none;
+    color: #347c7e;
+  }
+
+  .learnMore {
+    color: #002f49;
+    display: inline;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: 500;
+  }
+}
+
+.helpBox {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #828282;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3d3d3d;
+  cursor: pointer;
+  @include mobile() {
+    font-size: 14px;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 0 10px 10px 10px;
+    border-left: 2px solid #828282;
+    border-right: 2px solid #828282;
+    border-bottom: 2px solid #828282;
+    border-top: none;
+  }
+
+  .helpIcon {
+    margin-left: 5px;
+  }
+
+  &.onlyDesktop {
+    color: #fff;
+    border-color: #fff;
+    margin: 15px 5px 0;
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &.onlyMobile {
+    @include desktop() {
+      display: none;
+    }
+  }
+}
+
+.paymentMethodsBoxMobile {
+  border-bottom: 1px solid RGBA(0, 0, 0, 0.1);
+  padding: 10px;
+  padding-bottom: 5px;
+
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+.basketStepPaymentMethods {
+  order: 2;
+  margin-top: 20px;
+
+  @include mobile() {
+    display: none;
+  }
+}

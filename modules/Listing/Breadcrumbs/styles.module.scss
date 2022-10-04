@@ -1,0 +1,100 @@
+@import "mixins";
+
+
+.mainHeader {
+  @include mobile {
+    display: none;
+  }
+}
+.sectionHeader {
+  text-align: left;
+  margin-top: calc(95px + 40px);
+
+
+  @include tablet-activity {
+    margin-top: 60px;
+    padding: 0 22px 10px;
+  }
+  @include mobile {
+    margin-top: 10px;
+    padding: 0 16px 10px;
+  }
+  span, a {
+    color: #828282;
+    font-size: 14px;
+    line-height: 21px;
+
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+
+    @include mobile() {
+      font-size: 12px;
+      line-height: 9px;
+    }
+
+    &:last-child span{
+      display: none;
+    }
+  }
+
+  a:hover {
+    color: #FE504F;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+
+      .weather {
+        display: none;
+      }
+    }
+  }
+
+  @include mobile() {
+    padding-top: 65px;
+  }
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include tablet-activity() {
+      margin-top: 10px;
+    }
+
+    @include mobile() {
+      padding: 8px 5px;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    span, a {
+      color: #828282;
+      font-size: 14px;
+      line-height: 21px;
+
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+
+      @include mobile() {
+        line-height: 1;
+      }
+
+      &:last-child span{
+        display: none;
+      }
+    }
+
+    a:hover {
+      color: #FE504F;
+    }
+
+  }

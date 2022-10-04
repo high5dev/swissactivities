@@ -1,0 +1,22 @@
+{
+  "name": "Content API GraphQL Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Production Environment": {
+        "url": "https://contentapi.swissactivities.com/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      },
+      "Staging Environment": {
+        "url": "https://contentapi.staging.swissactivities.com/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

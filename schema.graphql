@@ -1,0 +1,2866 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+union Morph = Activity | ActivityAggregator | ActivityAggregatorAvg | ActivityAggregatorMax | ActivityAggregatorMin | ActivityAggregatorSum | ActivityAttribute | ActivityAttributeAggregator | ActivityAttributeConnection | ActivityAttributeConnectionAttribute | ActivityAttributeConnectionCreated_at | ActivityAttributeConnectionId | ActivityAttributeConnectionUpdated_at | ActivityAttributeConnectionValue | ActivityAttributeGroupBy | ActivityConnection | ActivityConnectionCreated_at | ActivityConnectionDestination | ActivityConnectionId | ActivityConnectionInfo | ActivityConnectionLocation | ActivityConnectionMigration_id | ActivityConnectionStatus | ActivityConnectionSupplier | ActivityConnectionTeaser_image | ActivityConnectionType | ActivityConnectionUpdated_at | ActivityGroupBy | ActivityLocation | ActivityLocationAggregator | ActivityLocationConnection | ActivityLocationConnectionCreated_at | ActivityLocationConnectionDescription | ActivityLocationConnectionGeonames_id | ActivityLocationConnectionId | ActivityLocationConnectionOld_slugs | ActivityLocationConnectionParent | ActivityLocationConnectionSlug | ActivityLocationConnectionTeaser | ActivityLocationConnectionTeaser_image | ActivityLocationConnectionTitle | ActivityLocationConnectionUpdated_at | ActivityLocationGroupBy | ActivityType | ActivityTypeAggregator | ActivityTypeConnection | ActivityTypeConnectionCreated_at | ActivityTypeConnectionDescription | ActivityTypeConnectionIcon_name | ActivityTypeConnectionId | ActivityTypeConnectionOld_slugs | ActivityTypeConnectionParent | ActivityTypeConnectionSlug | ActivityTypeConnectionTeaser | ActivityTypeConnectionTeaser_image | ActivityTypeConnectionTitle | ActivityTypeConnectionUpdated_at | ActivityTypeGroupBy | Attribute | AttributeAggregator | AttributeConnection | AttributeConnectionCreated_at | AttributeConnectionData_type | AttributeConnectionId | AttributeConnectionLabel | AttributeConnectionUnit | AttributeConnectionUpdated_at | AttributeGroupBy | Audience | AudienceLabel | ComponentActivityAttributeTranslation | ComponentActivityAudience | ComponentActivityBenefit | ComponentActivityContentBlock | ComponentActivityGalleryTranslation | ComponentActivityHighlight | ComponentActivityInfo | ComponentActivityLocationTranslation | ComponentActivityTranslation | ComponentActivityTypeTranslation | ComponentAttributeTranslation | ComponentEmployeeTranslation | ComponentFaqTranslations | ComponentListingContentBlock | ComponentListingGalleryTranslation | ComponentListingInfo | ComponentListingTranslation | ComponentLocationInfo | ComponentLocationLocation | ComponentLocationTranslation | ComponentOfferTranslation | ComponentSeoGoogleAdsInfo | ComponentSupplierContact | ComponentTextTranslation | ComponentUspTranslations | Config | Employee | EmployeeAggregator | EmployeeConnection | EmployeeConnectionAboutme | EmployeeConnectionCreated_at | EmployeeConnectionFamily_name | EmployeeConnectionGiven_name | EmployeeConnectionId | EmployeeConnectionLinkedin_url | EmployeeConnectionPicture | EmployeeConnectionRole | EmployeeConnectionUpdated_at | EmployeeGroupBy | Faq | FaqAggregator | FaqConnection | FaqConnectionAnswer | FaqConnectionCreated_at | FaqConnectionId | FaqConnectionQuestion | FaqConnectionUpdated_at | FaqGroupBy | Listing | ListingAggregator | ListingConnection | ListingConnectionCreated_at | ListingConnectionId | ListingConnectionInfo | ListingConnectionLatitude | ListingConnectionLongitude | ListingConnectionOutdooractive_config | ListingConnectionParent | ListingConnectionPublished_at | ListingConnectionTeaser_image | ListingConnectionType | ListingConnectionUpdated_at | ListingGroupBy | Offer | OfferAggregator | OfferConnection | OfferConnectionCreated_at | OfferConnectionDescription | OfferConnectionId | OfferConnectionLabel | OfferConnectionUpdated_at | OfferGroupBy | Supplier | SupplierAggregator | SupplierAggregatorAvg | SupplierAggregatorMax | SupplierAggregatorMin | SupplierAggregatorSum | SupplierConnection | SupplierConnectionContact | SupplierConnectionCountry_code | SupplierConnectionCreated_at | SupplierConnectionId | SupplierConnectionMigration_id | SupplierConnectionName | SupplierConnectionUpdated_at | SupplierConnectionWebsite | SupplierGroupBy | Text | TextAggregator | TextConnection | TextConnectionCreated_at | TextConnectionId | TextConnectionKey | TextConnectionUpdated_at | TextConnectionValue | TextGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreated_at | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdated_at | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserGroupBy | Usps | UspsAggregator | UspsConnection | UspsConnectionCreated_at | UspsConnectionIcon_name | UspsConnectionId | UspsConnectionIs_selectable | UspsConnectionKey | UspsConnectionLabel | UspsConnectionUpdated_at | UspsGroupBy | createActivityAttributePayload | createActivityLocationPayload | createActivityPayload | createActivityTypePayload | createAttributePayload | createEmployeePayload | createFaqPayload | createListingPayload | createOfferPayload | createRolePayload | createSupplierPayload | createTextPayload | createUserPayload | createUspPayload | deleteActivityAttributePayload | deleteActivityLocationPayload | deleteActivityPayload | deleteActivityTypePayload | deleteAttributePayload | deleteConfigPayload | deleteEmployeePayload | deleteFaqPayload | deleteFilePayload | deleteListingPayload | deleteOfferPayload | deleteRolePayload | deleteSupplierPayload | deleteTextPayload | deleteUserPayload | deleteUspPayload | updateActivityAttributePayload | updateActivityLocationPayload | updateActivityPayload | updateActivityTypePayload | updateAttributePayload | updateConfigPayload | updateEmployeePayload | updateFaqPayload | updateListingPayload | updateOfferPayload | updateRolePayload | updateSupplierPayload | updateTextPayload | updateUserPayload | updateUspPayload
+
+type Activity {
+    attribute_values(limit: Int, sort: String, start: Int, where: JSON): [ActivityAttribute]
+    content_blocks: [ComponentActivityContentBlock]
+    created_at: DateTime!
+    destination: ComponentLocationLocation
+    gallery(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    id: ID!
+    info: ComponentActivityInfo
+    listings(limit: Int, sort: String, start: Int, where: JSON): [Listing]
+    location: ActivityLocation
+    meeting_points: [ComponentLocationLocation]
+    migration_id: Int
+    status: String
+    supplier: Supplier
+    teaser_image: UploadFile
+    translations: [ComponentActivityTranslation]
+    type: ActivityType
+    updated_at: DateTime!
+    usps(limit: Int, sort: String, start: Int, where: JSON): [Usps]
+}
+
+type ActivityAggregator {
+    avg: ActivityAggregatorAvg
+    count: Int
+    max: ActivityAggregatorMax
+    min: ActivityAggregatorMin
+    sum: ActivityAggregatorSum
+    totalCount: Int
+}
+
+type ActivityAggregatorAvg {
+    migration_id: Float
+}
+
+type ActivityAggregatorMax {
+    migration_id: Float
+}
+
+type ActivityAggregatorMin {
+    migration_id: Float
+}
+
+type ActivityAggregatorSum {
+    migration_id: Float
+}
+
+type ActivityAttribute {
+    activities(limit: Int, sort: String, start: Int, where: JSON): [Activity]
+    attribute: Attribute
+    created_at: DateTime!
+    id: ID!
+    translations: [ComponentActivityAttributeTranslation]
+    updated_at: DateTime!
+    value: String!
+}
+
+type ActivityAttributeAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ActivityAttributeConnection {
+    aggregate: ActivityAttributeAggregator
+    groupBy: ActivityAttributeGroupBy
+    values: [ActivityAttribute]
+}
+
+type ActivityAttributeConnectionAttribute {
+    connection: ActivityAttributeConnection
+    key: ID
+}
+
+type ActivityAttributeConnectionCreated_at {
+    connection: ActivityAttributeConnection
+    key: DateTime
+}
+
+type ActivityAttributeConnectionId {
+    connection: ActivityAttributeConnection
+    key: ID
+}
+
+type ActivityAttributeConnectionUpdated_at {
+    connection: ActivityAttributeConnection
+    key: DateTime
+}
+
+type ActivityAttributeConnectionValue {
+    connection: ActivityAttributeConnection
+    key: String
+}
+
+type ActivityAttributeGroupBy {
+    attribute: [ActivityAttributeConnectionAttribute]
+    created_at: [ActivityAttributeConnectionCreated_at]
+    id: [ActivityAttributeConnectionId]
+    updated_at: [ActivityAttributeConnectionUpdated_at]
+    value: [ActivityAttributeConnectionValue]
+}
+
+type ActivityConnection {
+    aggregate: ActivityAggregator
+    groupBy: ActivityGroupBy
+    values: [Activity]
+}
+
+type ActivityConnectionCreated_at {
+    connection: ActivityConnection
+    key: DateTime
+}
+
+type ActivityConnectionDestination {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionId {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionInfo {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionLocation {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionMigration_id {
+    connection: ActivityConnection
+    key: Int
+}
+
+type ActivityConnectionStatus {
+    connection: ActivityConnection
+    key: String
+}
+
+type ActivityConnectionSupplier {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionTeaser_image {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionType {
+    connection: ActivityConnection
+    key: ID
+}
+
+type ActivityConnectionUpdated_at {
+    connection: ActivityConnection
+    key: DateTime
+}
+
+type ActivityGroupBy {
+    created_at: [ActivityConnectionCreated_at]
+    destination: [ActivityConnectionDestination]
+    id: [ActivityConnectionId]
+    info: [ActivityConnectionInfo]
+    location: [ActivityConnectionLocation]
+    migration_id: [ActivityConnectionMigration_id]
+    status: [ActivityConnectionStatus]
+    supplier: [ActivityConnectionSupplier]
+    teaser_image: [ActivityConnectionTeaser_image]
+    type: [ActivityConnectionType]
+    updated_at: [ActivityConnectionUpdated_at]
+}
+
+type ActivityLocation {
+    activities(limit: Int, sort: String, start: Int, where: JSON): [Activity]
+    children(limit: Int, sort: String, start: Int, where: JSON): [ActivityLocation]
+    created_at: DateTime!
+    description: String
+    faq(limit: Int, sort: String, start: Int, where: JSON): [Faq]
+    geonames_id: String
+    id: ID!
+    listings(limit: Int, sort: String, start: Int, where: JSON): [Listing]
+    old_slugs: JSON
+    parent: ActivityLocation
+    slug: String!
+    teaser: String
+    teaser_image: UploadFile
+    title: String!
+    translations: [ComponentActivityLocationTranslation]
+    updated_at: DateTime!
+}
+
+type ActivityLocationAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ActivityLocationConnection {
+    aggregate: ActivityLocationAggregator
+    groupBy: ActivityLocationGroupBy
+    values: [ActivityLocation]
+}
+
+type ActivityLocationConnectionCreated_at {
+    connection: ActivityLocationConnection
+    key: DateTime
+}
+
+type ActivityLocationConnectionDescription {
+    connection: ActivityLocationConnection
+    key: String
+}
+
+type ActivityLocationConnectionGeonames_id {
+    connection: ActivityLocationConnection
+    key: String
+}
+
+type ActivityLocationConnectionId {
+    connection: ActivityLocationConnection
+    key: ID
+}
+
+type ActivityLocationConnectionOld_slugs {
+    connection: ActivityLocationConnection
+    key: JSON
+}
+
+type ActivityLocationConnectionParent {
+    connection: ActivityLocationConnection
+    key: ID
+}
+
+type ActivityLocationConnectionSlug {
+    connection: ActivityLocationConnection
+    key: String
+}
+
+type ActivityLocationConnectionTeaser {
+    connection: ActivityLocationConnection
+    key: String
+}
+
+type ActivityLocationConnectionTeaser_image {
+    connection: ActivityLocationConnection
+    key: ID
+}
+
+type ActivityLocationConnectionTitle {
+    connection: ActivityLocationConnection
+    key: String
+}
+
+type ActivityLocationConnectionUpdated_at {
+    connection: ActivityLocationConnection
+    key: DateTime
+}
+
+type ActivityLocationGroupBy {
+    created_at: [ActivityLocationConnectionCreated_at]
+    description: [ActivityLocationConnectionDescription]
+    geonames_id: [ActivityLocationConnectionGeonames_id]
+    id: [ActivityLocationConnectionId]
+    old_slugs: [ActivityLocationConnectionOld_slugs]
+    parent: [ActivityLocationConnectionParent]
+    slug: [ActivityLocationConnectionSlug]
+    teaser: [ActivityLocationConnectionTeaser]
+    teaser_image: [ActivityLocationConnectionTeaser_image]
+    title: [ActivityLocationConnectionTitle]
+    updated_at: [ActivityLocationConnectionUpdated_at]
+}
+
+type ActivityType {
+    activities(limit: Int, sort: String, start: Int, where: JSON): [Activity]
+    children(limit: Int, sort: String, start: Int, where: JSON): [ActivityType]
+    created_at: DateTime!
+    description: String
+    faq(limit: Int, sort: String, start: Int, where: JSON): [Faq]
+    icon_name: String
+    id: ID!
+    listings(limit: Int, sort: String, start: Int, where: JSON): [Listing]
+    old_slugs: JSON
+    parent: ActivityType
+    slug: String!
+    teaser: String
+    teaser_image: UploadFile
+    title: String!
+    translations: [ComponentActivityTypeTranslation]
+    updated_at: DateTime!
+}
+
+type ActivityTypeAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ActivityTypeConnection {
+    aggregate: ActivityTypeAggregator
+    groupBy: ActivityTypeGroupBy
+    values: [ActivityType]
+}
+
+type ActivityTypeConnectionCreated_at {
+    connection: ActivityTypeConnection
+    key: DateTime
+}
+
+type ActivityTypeConnectionDescription {
+    connection: ActivityTypeConnection
+    key: String
+}
+
+type ActivityTypeConnectionIcon_name {
+    connection: ActivityTypeConnection
+    key: String
+}
+
+type ActivityTypeConnectionId {
+    connection: ActivityTypeConnection
+    key: ID
+}
+
+type ActivityTypeConnectionOld_slugs {
+    connection: ActivityTypeConnection
+    key: JSON
+}
+
+type ActivityTypeConnectionParent {
+    connection: ActivityTypeConnection
+    key: ID
+}
+
+type ActivityTypeConnectionSlug {
+    connection: ActivityTypeConnection
+    key: String
+}
+
+type ActivityTypeConnectionTeaser {
+    connection: ActivityTypeConnection
+    key: String
+}
+
+type ActivityTypeConnectionTeaser_image {
+    connection: ActivityTypeConnection
+    key: ID
+}
+
+type ActivityTypeConnectionTitle {
+    connection: ActivityTypeConnection
+    key: String
+}
+
+type ActivityTypeConnectionUpdated_at {
+    connection: ActivityTypeConnection
+    key: DateTime
+}
+
+type ActivityTypeGroupBy {
+    created_at: [ActivityTypeConnectionCreated_at]
+    description: [ActivityTypeConnectionDescription]
+    icon_name: [ActivityTypeConnectionIcon_name]
+    id: [ActivityTypeConnectionId]
+    old_slugs: [ActivityTypeConnectionOld_slugs]
+    parent: [ActivityTypeConnectionParent]
+    slug: [ActivityTypeConnectionSlug]
+    teaser: [ActivityTypeConnectionTeaser]
+    teaser_image: [ActivityTypeConnectionTeaser_image]
+    title: [ActivityTypeConnectionTitle]
+    updated_at: [ActivityTypeConnectionUpdated_at]
+}
+
+type AdminUser {
+    firstname: String!
+    id: ID!
+    lastname: String!
+    username: String
+}
+
+type Attribute {
+    activity_attributes(limit: Int, sort: String, start: Int, where: JSON): [ActivityAttribute]
+    created_at: DateTime!
+    data_type: ENUM_ATTRIBUTE_DATA_TYPE!
+    id: ID!
+    label: String!
+    translations: [ComponentAttributeTranslation]
+    unit: String
+    updated_at: DateTime!
+}
+
+type AttributeAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type AttributeConnection {
+    aggregate: AttributeAggregator
+    groupBy: AttributeGroupBy
+    values: [Attribute]
+}
+
+type AttributeConnectionCreated_at {
+    connection: AttributeConnection
+    key: DateTime
+}
+
+type AttributeConnectionData_type {
+    connection: AttributeConnection
+    key: String
+}
+
+type AttributeConnectionId {
+    connection: AttributeConnection
+    key: ID
+}
+
+type AttributeConnectionLabel {
+    connection: AttributeConnection
+    key: String
+}
+
+type AttributeConnectionUnit {
+    connection: AttributeConnection
+    key: String
+}
+
+type AttributeConnectionUpdated_at {
+    connection: AttributeConnection
+    key: DateTime
+}
+
+type AttributeGroupBy {
+    created_at: [AttributeConnectionCreated_at]
+    data_type: [AttributeConnectionData_type]
+    id: [AttributeConnectionId]
+    label: [AttributeConnectionLabel]
+    unit: [AttributeConnectionUnit]
+    updated_at: [AttributeConnectionUpdated_at]
+}
+
+type Audience {
+    age_from: Int!
+    age_to: Int
+    key: String!
+    labels: [AudienceLabel]
+}
+
+type AudienceLabel {
+    locale: String!
+    text: String!
+}
+
+type ComponentActivityAttributeTranslation {
+    id: ID!
+    locale: ENUM_COMPONENTACTIVITYATTRIBUTETRANSLATION_LOCALE!
+    value: String!
+}
+
+type ComponentActivityAudience {
+    age_from: Int!
+    age_to: Int
+    id: ID!
+    key: String!
+}
+
+type ComponentActivityBenefit {
+    id: ID!
+    text: String!
+    type: ENUM_COMPONENTACTIVITYBENEFIT_TYPE!
+}
+
+type ComponentActivityContentBlock {
+    id: ID!
+    text: String
+    title: String!
+    youtube_url: String
+}
+
+type ComponentActivityGalleryTranslation {
+    alt_text: String!
+    id: ID!
+    picture_name: String!
+}
+
+type ComponentActivityHighlight {
+    id: ID!
+    text: String!
+}
+
+type ComponentActivityInfo {
+    benefits: [ComponentActivityBenefit]
+    google_ads: ComponentSeoGoogleAdsInfo
+    highlights: [ComponentActivityHighlight]
+    id: ID!
+    important_information: String
+    old_slugs: JSON
+    slug: String!
+    teaser: String!
+    title: String!
+}
+
+type ComponentActivityLocationTranslation {
+    description: String
+    id: ID!
+    locale: ENUM_COMPONENTACTIVITYLOCATIONTRANSLATION_LOCALE!
+    old_slugs: JSON
+    slug: String!
+    teaser: String
+    teaser_image_alt_text: String
+    title: String!
+}
+
+type ComponentActivityTranslation {
+    content_blocks: [ComponentActivityContentBlock]
+    gallery: [ComponentActivityGalleryTranslation]
+    id: ID!
+    info: ComponentActivityInfo
+    locale: ENUM_COMPONENTACTIVITYTRANSLATION_LOCALE!
+    teaser_image_alt_text: String
+}
+
+type ComponentActivityTypeTranslation {
+    description: String
+    id: ID!
+    locale: ENUM_COMPONENTACTIVITYTYPETRANSLATION_LOCALE!
+    old_slugs: JSON
+    slug: String!
+    teaser: String
+    teaser_image_alt_text: String
+    title: String!
+}
+
+type ComponentAttributeTranslation {
+    id: ID!
+    label: String!
+    locale: ENUM_COMPONENTATTRIBUTETRANSLATION_LOCALE!
+}
+
+type ComponentEmployeeTranslation {
+    aboutme: String!
+    id: ID!
+    locale: ENUM_COMPONENTEMPLOYEETRANSLATION_LOCALE!
+}
+
+type ComponentFaqTranslations {
+    answer: String!
+    id: ID!
+    locale: ENUM_COMPONENTFAQTRANSLATIONS_LOCALE!
+    question: String!
+}
+
+type ComponentListingContentBlock {
+    id: ID!
+    pictures(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    text: String
+    youtube_url: String
+}
+
+type ComponentListingGalleryTranslation {
+    alt_text: String!
+    id: ID!
+    picture_name: String!
+}
+
+type ComponentListingInfo {
+    google_ads: ComponentSeoGoogleAdsInfo
+    id: ID!
+    meta_description: String
+    old_slugs: JSON
+    slug: String!
+    teaser: String
+    title: String!
+}
+
+type ComponentListingTranslation {
+    content_blocks: [ComponentListingContentBlock]
+    gallery: [ComponentListingGalleryTranslation]
+    id: ID!
+    info: ComponentListingInfo
+    locale: ENUM_COMPONENTLISTINGTRANSLATION_LOCALE!
+    teaser_image_alt_text: String
+}
+
+type ComponentLocationInfo {
+    address: String!
+    id: ID!
+    label: String!
+}
+
+type ComponentLocationLocation {
+    id: ID!
+    info: ComponentLocationInfo
+    latitude: String!
+    longitude: String!
+    translations: [ComponentLocationTranslation]
+}
+
+type ComponentLocationTranslation {
+    id: ID!
+    info: [ComponentLocationInfo]
+    locale: ENUM_COMPONENTLOCATIONTRANSLATION_LOCALE!
+}
+
+type ComponentOfferTranslation {
+    description: String
+    id: ID!
+    label: String!
+    locale: ENUM_COMPONENTOFFERTRANSLATION_LOCALE!
+}
+
+type ComponentSeoGoogleAdsInfo {
+    description1: String!
+    description2: String
+    headline1: String!
+    headline2: String
+    headline3: String
+    id: ID!
+    path1: String
+    path2: String
+}
+
+type ComponentSupplierContact {
+    email: String!
+    id: ID!
+    name: String!
+    phone: String
+}
+
+type ComponentTextTranslation {
+    id: ID!
+    locale: ENUM_COMPONENTTEXTTRANSLATION_LOCALE!
+    value: String!
+}
+
+type ComponentUspTranslations {
+    id: ID!
+    label: String!
+    locale: ENUM_COMPONENTUSPTRANSLATIONS_LOCALE!
+}
+
+type Config {
+    audiences: [ComponentActivityAudience]
+    created_at: DateTime!
+    id: ID!
+    updated_at: DateTime!
+}
+
+type Employee {
+    aboutme: String!
+    created_at: DateTime!
+    family_name: String!
+    given_name: String!
+    id: ID!
+    linkedin_url: String
+    picture: UploadFile
+    role: String!
+    translations: [ComponentEmployeeTranslation]
+    updated_at: DateTime!
+}
+
+type EmployeeAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type EmployeeConnection {
+    aggregate: EmployeeAggregator
+    groupBy: EmployeeGroupBy
+    values: [Employee]
+}
+
+type EmployeeConnectionAboutme {
+    connection: EmployeeConnection
+    key: String
+}
+
+type EmployeeConnectionCreated_at {
+    connection: EmployeeConnection
+    key: DateTime
+}
+
+type EmployeeConnectionFamily_name {
+    connection: EmployeeConnection
+    key: String
+}
+
+type EmployeeConnectionGiven_name {
+    connection: EmployeeConnection
+    key: String
+}
+
+type EmployeeConnectionId {
+    connection: EmployeeConnection
+    key: ID
+}
+
+type EmployeeConnectionLinkedin_url {
+    connection: EmployeeConnection
+    key: String
+}
+
+type EmployeeConnectionPicture {
+    connection: EmployeeConnection
+    key: ID
+}
+
+type EmployeeConnectionRole {
+    connection: EmployeeConnection
+    key: String
+}
+
+type EmployeeConnectionUpdated_at {
+    connection: EmployeeConnection
+    key: DateTime
+}
+
+type EmployeeGroupBy {
+    aboutme: [EmployeeConnectionAboutme]
+    created_at: [EmployeeConnectionCreated_at]
+    family_name: [EmployeeConnectionFamily_name]
+    given_name: [EmployeeConnectionGiven_name]
+    id: [EmployeeConnectionId]
+    linkedin_url: [EmployeeConnectionLinkedin_url]
+    picture: [EmployeeConnectionPicture]
+    role: [EmployeeConnectionRole]
+    updated_at: [EmployeeConnectionUpdated_at]
+}
+
+type Faq {
+    answer: String!
+    created_at: DateTime!
+    id: ID!
+    question: String!
+    translations: [ComponentFaqTranslations]
+    updated_at: DateTime!
+}
+
+type FaqAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type FaqConnection {
+    aggregate: FaqAggregator
+    groupBy: FaqGroupBy
+    values: [Faq]
+}
+
+type FaqConnectionAnswer {
+    connection: FaqConnection
+    key: String
+}
+
+type FaqConnectionCreated_at {
+    connection: FaqConnection
+    key: DateTime
+}
+
+type FaqConnectionId {
+    connection: FaqConnection
+    key: ID
+}
+
+type FaqConnectionQuestion {
+    connection: FaqConnection
+    key: String
+}
+
+type FaqConnectionUpdated_at {
+    connection: FaqConnection
+    key: DateTime
+}
+
+type FaqGroupBy {
+    answer: [FaqConnectionAnswer]
+    created_at: [FaqConnectionCreated_at]
+    id: [FaqConnectionId]
+    question: [FaqConnectionQuestion]
+    updated_at: [FaqConnectionUpdated_at]
+}
+
+type Listing {
+    activities(limit: Int, sort: String, start: Int, where: JSON): [Activity]
+    activity_types(limit: Int, sort: String, start: Int, where: JSON): [ActivityType]
+    children(limit: Int, sort: String, start: Int, where: JSON): [Listing]
+    content_blocks: [ComponentListingContentBlock]
+    created_at: DateTime!
+    gallery(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    id: ID!
+    info: ComponentListingInfo
+    latitude: String
+    locations(limit: Int, sort: String, start: Int, where: JSON): [ActivityLocation]
+    longitude: String
+    outdooractive_config: JSON
+    parent: Listing
+    published_at: DateTime
+    teaser_image: UploadFile
+    translations: [ComponentListingTranslation]
+    type: ENUM_LISTING_TYPE
+    updated_at: DateTime!
+}
+
+type ListingAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ListingConnection {
+    aggregate: ListingAggregator
+    groupBy: ListingGroupBy
+    values: [Listing]
+}
+
+type ListingConnectionCreated_at {
+    connection: ListingConnection
+    key: DateTime
+}
+
+type ListingConnectionId {
+    connection: ListingConnection
+    key: ID
+}
+
+type ListingConnectionInfo {
+    connection: ListingConnection
+    key: ID
+}
+
+type ListingConnectionLatitude {
+    connection: ListingConnection
+    key: String
+}
+
+type ListingConnectionLongitude {
+    connection: ListingConnection
+    key: String
+}
+
+type ListingConnectionOutdooractive_config {
+    connection: ListingConnection
+    key: JSON
+}
+
+type ListingConnectionParent {
+    connection: ListingConnection
+    key: ID
+}
+
+type ListingConnectionPublished_at {
+    connection: ListingConnection
+    key: DateTime
+}
+
+type ListingConnectionTeaser_image {
+    connection: ListingConnection
+    key: ID
+}
+
+type ListingConnectionType {
+    connection: ListingConnection
+    key: String
+}
+
+type ListingConnectionUpdated_at {
+    connection: ListingConnection
+    key: DateTime
+}
+
+type ListingGroupBy {
+    created_at: [ListingConnectionCreated_at]
+    id: [ListingConnectionId]
+    info: [ListingConnectionInfo]
+    latitude: [ListingConnectionLatitude]
+    longitude: [ListingConnectionLongitude]
+    outdooractive_config: [ListingConnectionOutdooractive_config]
+    parent: [ListingConnectionParent]
+    published_at: [ListingConnectionPublished_at]
+    teaser_image: [ListingConnectionTeaser_image]
+    type: [ListingConnectionType]
+    updated_at: [ListingConnectionUpdated_at]
+}
+
+type Mutation {
+    createActivity(input: createActivityInput): createActivityPayload
+    createActivityAttribute(input: createActivityAttributeInput): createActivityAttributePayload
+    createActivityLocation(input: createActivityLocationInput): createActivityLocationPayload
+    createActivityType(input: createActivityTypeInput): createActivityTypePayload
+    createAttribute(input: createAttributeInput): createAttributePayload
+    createEmployee(input: createEmployeeInput): createEmployeePayload
+    createFaq(input: createFaqInput): createFaqPayload
+    createListing(input: createListingInput): createListingPayload
+    createOffer(input: createOfferInput): createOfferPayload
+    "Create a new role"
+    createRole(input: createRoleInput): createRolePayload
+    createSupplier(input: createSupplierInput): createSupplierPayload
+    createText(input: createTextInput): createTextPayload
+    "Create a new user"
+    createUser(input: createUserInput): createUserPayload
+    createUsp(input: createUspInput): createUspPayload
+    deleteActivity(input: deleteActivityInput): deleteActivityPayload
+    deleteActivityAttribute(input: deleteActivityAttributeInput): deleteActivityAttributePayload
+    deleteActivityLocation(input: deleteActivityLocationInput): deleteActivityLocationPayload
+    deleteActivityType(input: deleteActivityTypeInput): deleteActivityTypePayload
+    deleteAttribute(input: deleteAttributeInput): deleteAttributePayload
+    deleteConfig: deleteConfigPayload
+    deleteEmployee(input: deleteEmployeeInput): deleteEmployeePayload
+    deleteFaq(input: deleteFaqInput): deleteFaqPayload
+    "Delete one file"
+    deleteFile(input: deleteFileInput): deleteFilePayload
+    deleteListing(input: deleteListingInput): deleteListingPayload
+    deleteOffer(input: deleteOfferInput): deleteOfferPayload
+    "Delete an existing role"
+    deleteRole(input: deleteRoleInput): deleteRolePayload
+    deleteSupplier(input: deleteSupplierInput): deleteSupplierPayload
+    deleteText(input: deleteTextInput): deleteTextPayload
+    "Delete an existing user"
+    deleteUser(input: deleteUserInput): deleteUserPayload
+    deleteUsp(input: deleteUspInput): deleteUspPayload
+    emailConfirmation(confirmation: String!): UsersPermissionsLoginPayload
+    forgotPassword(email: String!): UserPermissionsPasswordPayload
+    login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
+    multipleUpload(field: String, files: [Upload]!, ref: String, refId: ID, source: String): [UploadFile]!
+    register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
+    resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
+    updateActivity(input: updateActivityInput): updateActivityPayload
+    updateActivityAttribute(input: updateActivityAttributeInput): updateActivityAttributePayload
+    updateActivityLocation(input: updateActivityLocationInput): updateActivityLocationPayload
+    updateActivityType(input: updateActivityTypeInput): updateActivityTypePayload
+    updateAttribute(input: updateAttributeInput): updateAttributePayload
+    updateConfig(input: updateConfigInput): updateConfigPayload
+    updateEmployee(input: updateEmployeeInput): updateEmployeePayload
+    updateFaq(input: updateFaqInput): updateFaqPayload
+    updateFileInfo(id: ID!, info: FileInfoInput!): UploadFile!
+    updateListing(input: updateListingInput): updateListingPayload
+    updateOffer(input: updateOfferInput): updateOfferPayload
+    "Update an existing role"
+    updateRole(input: updateRoleInput): updateRolePayload
+    updateSupplier(input: updateSupplierInput): updateSupplierPayload
+    updateText(input: updateTextInput): updateTextPayload
+    "Update an existing user"
+    updateUser(input: updateUserInput): updateUserPayload
+    updateUsp(input: updateUspInput): updateUspPayload
+    upload(field: String, file: Upload!, info: FileInfoInput, ref: String, refId: ID, source: String): UploadFile!
+}
+
+type Offer {
+    created_at: DateTime!
+    description: String
+    id: ID!
+    label: String!
+    translations: [ComponentOfferTranslation]
+    updated_at: DateTime!
+}
+
+type OfferAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type OfferConnection {
+    aggregate: OfferAggregator
+    groupBy: OfferGroupBy
+    values: [Offer]
+}
+
+type OfferConnectionCreated_at {
+    connection: OfferConnection
+    key: DateTime
+}
+
+type OfferConnectionDescription {
+    connection: OfferConnection
+    key: String
+}
+
+type OfferConnectionId {
+    connection: OfferConnection
+    key: ID
+}
+
+type OfferConnectionLabel {
+    connection: OfferConnection
+    key: String
+}
+
+type OfferConnectionUpdated_at {
+    connection: OfferConnection
+    key: DateTime
+}
+
+type OfferGroupBy {
+    created_at: [OfferConnectionCreated_at]
+    description: [OfferConnectionDescription]
+    id: [OfferConnectionId]
+    label: [OfferConnectionLabel]
+    updated_at: [OfferConnectionUpdated_at]
+}
+
+type Query {
+    activities(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Activity]
+    activitiesConnection(limit: Int, sort: String, start: Int, where: JSON): ActivityConnection
+    activity(id: ID!, publicationState: PublicationState): Activity
+    activityAttribute(id: ID!, publicationState: PublicationState): ActivityAttribute
+    activityAttributes(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [ActivityAttribute]
+    activityAttributesConnection(limit: Int, sort: String, start: Int, where: JSON): ActivityAttributeConnection
+    activityLocation(id: ID!, publicationState: PublicationState): ActivityLocation
+    activityLocations(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [ActivityLocation]
+    activityLocationsConnection(limit: Int, sort: String, start: Int, where: JSON): ActivityLocationConnection
+    activityType(id: ID!, publicationState: PublicationState): ActivityType
+    activityTypes(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [ActivityType]
+    activityTypesConnection(limit: Int, sort: String, start: Int, where: JSON): ActivityTypeConnection
+    attribute(id: ID!, publicationState: PublicationState): Attribute
+    attributes(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Attribute]
+    attributesConnection(limit: Int, sort: String, start: Int, where: JSON): AttributeConnection
+    config(publicationState: PublicationState): Config
+    employee(id: ID!, publicationState: PublicationState): Employee
+    employees(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Employee]
+    employeesConnection(limit: Int, sort: String, start: Int, where: JSON): EmployeeConnection
+    faq(id: ID!, publicationState: PublicationState): Faq
+    faqs(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Faq]
+    faqsConnection(limit: Int, sort: String, start: Int, where: JSON): FaqConnection
+    files(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UploadFile]
+    filesConnection(limit: Int, sort: String, start: Int, where: JSON): UploadFileConnection
+    listing(id: ID!, publicationState: PublicationState): Listing
+    listings(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Listing]
+    listingsConnection(limit: Int, sort: String, start: Int, where: JSON): ListingConnection
+    me: UsersPermissionsMe
+    offer(id: ID!, publicationState: PublicationState): Offer
+    offers(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Offer]
+    offersConnection(limit: Int, sort: String, start: Int, where: JSON): OfferConnection
+    role(id: ID!, publicationState: PublicationState): UsersPermissionsRole
+    "Retrieve all the existing roles. You can't apply filters on this query."
+    roles(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
+    rolesConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsRoleConnection
+    supplier(id: ID!, publicationState: PublicationState): Supplier
+    supplierAudiences(id: Int!): [Audience]
+    suppliers(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Supplier]
+    suppliersConnection(limit: Int, sort: String, start: Int, where: JSON): SupplierConnection
+    text(id: ID!, publicationState: PublicationState): Text
+    texts(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Text]
+    textsConnection(limit: Int, sort: String, start: Int, where: JSON): TextConnection
+    user(id: ID!, publicationState: PublicationState): UsersPermissionsUser
+    users(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+    usersConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsUserConnection
+    usp(id: ID!, publicationState: PublicationState): Usps
+    usps(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Usps]
+    uspsConnection(limit: Int, sort: String, start: Int, where: JSON): UspsConnection
+}
+
+type Supplier {
+    audiences: [ComponentActivityAudience]
+    contact: ComponentSupplierContact
+    country_code: String
+    created_at: DateTime!
+    id: ID!
+    migration_id: Int
+    name: String!
+    updated_at: DateTime!
+    website: String
+}
+
+type SupplierAggregator {
+    avg: SupplierAggregatorAvg
+    count: Int
+    max: SupplierAggregatorMax
+    min: SupplierAggregatorMin
+    sum: SupplierAggregatorSum
+    totalCount: Int
+}
+
+type SupplierAggregatorAvg {
+    migration_id: Float
+}
+
+type SupplierAggregatorMax {
+    migration_id: Float
+}
+
+type SupplierAggregatorMin {
+    migration_id: Float
+}
+
+type SupplierAggregatorSum {
+    migration_id: Float
+}
+
+type SupplierConnection {
+    aggregate: SupplierAggregator
+    groupBy: SupplierGroupBy
+    values: [Supplier]
+}
+
+type SupplierConnectionContact {
+    connection: SupplierConnection
+    key: ID
+}
+
+type SupplierConnectionCountry_code {
+    connection: SupplierConnection
+    key: String
+}
+
+type SupplierConnectionCreated_at {
+    connection: SupplierConnection
+    key: DateTime
+}
+
+type SupplierConnectionId {
+    connection: SupplierConnection
+    key: ID
+}
+
+type SupplierConnectionMigration_id {
+    connection: SupplierConnection
+    key: Int
+}
+
+type SupplierConnectionName {
+    connection: SupplierConnection
+    key: String
+}
+
+type SupplierConnectionUpdated_at {
+    connection: SupplierConnection
+    key: DateTime
+}
+
+type SupplierConnectionWebsite {
+    connection: SupplierConnection
+    key: String
+}
+
+type SupplierGroupBy {
+    contact: [SupplierConnectionContact]
+    country_code: [SupplierConnectionCountry_code]
+    created_at: [SupplierConnectionCreated_at]
+    id: [SupplierConnectionId]
+    migration_id: [SupplierConnectionMigration_id]
+    name: [SupplierConnectionName]
+    updated_at: [SupplierConnectionUpdated_at]
+    website: [SupplierConnectionWebsite]
+}
+
+type Text {
+    created_at: DateTime!
+    id: ID!
+    key: String!
+    translations: [ComponentTextTranslation]
+    updated_at: DateTime!
+    value: String!
+}
+
+type TextAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type TextConnection {
+    aggregate: TextAggregator
+    groupBy: TextGroupBy
+    values: [Text]
+}
+
+type TextConnectionCreated_at {
+    connection: TextConnection
+    key: DateTime
+}
+
+type TextConnectionId {
+    connection: TextConnection
+    key: ID
+}
+
+type TextConnectionKey {
+    connection: TextConnection
+    key: String
+}
+
+type TextConnectionUpdated_at {
+    connection: TextConnection
+    key: DateTime
+}
+
+type TextConnectionValue {
+    connection: TextConnection
+    key: String
+}
+
+type TextGroupBy {
+    created_at: [TextConnectionCreated_at]
+    id: [TextConnectionId]
+    key: [TextConnectionKey]
+    updated_at: [TextConnectionUpdated_at]
+    value: [TextConnectionValue]
+}
+
+type UploadFile {
+    alternativeText: String
+    caption: String
+    created_at: DateTime!
+    ext: String
+    formats: JSON
+    hash: String!
+    height: Int
+    id: ID!
+    mime: String!
+    name: String!
+    previewUrl: String
+    provider: String!
+    provider_metadata: JSON
+    related(limit: Int, sort: String, start: Int, where: JSON): [Morph]
+    size: Float!
+    updated_at: DateTime!
+    url: String!
+    width: Int
+}
+
+type UploadFileAggregator {
+    avg: UploadFileAggregatorAvg
+    count: Int
+    max: UploadFileAggregatorMax
+    min: UploadFileAggregatorMin
+    sum: UploadFileAggregatorSum
+    totalCount: Int
+}
+
+type UploadFileAggregatorAvg {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileAggregatorMax {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileAggregatorMin {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileAggregatorSum {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileConnection {
+    aggregate: UploadFileAggregator
+    groupBy: UploadFileGroupBy
+    values: [UploadFile]
+}
+
+type UploadFileConnectionAlternativeText {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionCaption {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionCreated_at {
+    connection: UploadFileConnection
+    key: DateTime
+}
+
+type UploadFileConnectionExt {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionFormats {
+    connection: UploadFileConnection
+    key: JSON
+}
+
+type UploadFileConnectionHash {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionHeight {
+    connection: UploadFileConnection
+    key: Int
+}
+
+type UploadFileConnectionId {
+    connection: UploadFileConnection
+    key: ID
+}
+
+type UploadFileConnectionMime {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionName {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionPreviewUrl {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionProvider {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionProvider_metadata {
+    connection: UploadFileConnection
+    key: JSON
+}
+
+type UploadFileConnectionSize {
+    connection: UploadFileConnection
+    key: Float
+}
+
+type UploadFileConnectionUpdated_at {
+    connection: UploadFileConnection
+    key: DateTime
+}
+
+type UploadFileConnectionUrl {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionWidth {
+    connection: UploadFileConnection
+    key: Int
+}
+
+type UploadFileGroupBy {
+    alternativeText: [UploadFileConnectionAlternativeText]
+    caption: [UploadFileConnectionCaption]
+    created_at: [UploadFileConnectionCreated_at]
+    ext: [UploadFileConnectionExt]
+    formats: [UploadFileConnectionFormats]
+    hash: [UploadFileConnectionHash]
+    height: [UploadFileConnectionHeight]
+    id: [UploadFileConnectionId]
+    mime: [UploadFileConnectionMime]
+    name: [UploadFileConnectionName]
+    previewUrl: [UploadFileConnectionPreviewUrl]
+    provider: [UploadFileConnectionProvider]
+    provider_metadata: [UploadFileConnectionProvider_metadata]
+    size: [UploadFileConnectionSize]
+    updated_at: [UploadFileConnectionUpdated_at]
+    url: [UploadFileConnectionUrl]
+    width: [UploadFileConnectionWidth]
+}
+
+type UserPermissionsPasswordPayload {
+    ok: Boolean!
+}
+
+type UsersPermissionsLoginPayload {
+    jwt: String
+    user: UsersPermissionsMe!
+}
+
+type UsersPermissionsMe {
+    blocked: Boolean
+    confirmed: Boolean
+    email: String!
+    id: ID!
+    role: UsersPermissionsMeRole
+    username: String!
+}
+
+type UsersPermissionsMeRole {
+    description: String
+    id: ID!
+    name: String!
+    type: String
+}
+
+type UsersPermissionsPermission {
+    action: String!
+    controller: String!
+    enabled: Boolean!
+    id: ID!
+    policy: String
+    role: UsersPermissionsRole
+    type: String!
+}
+
+type UsersPermissionsRole {
+    description: String
+    id: ID!
+    name: String!
+    permissions(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsPermission]
+    type: String
+    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsRoleAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UsersPermissionsRoleConnection {
+    aggregate: UsersPermissionsRoleAggregator
+    groupBy: UsersPermissionsRoleGroupBy
+    values: [UsersPermissionsRole]
+}
+
+type UsersPermissionsRoleConnectionDescription {
+    connection: UsersPermissionsRoleConnection
+    key: String
+}
+
+type UsersPermissionsRoleConnectionId {
+    connection: UsersPermissionsRoleConnection
+    key: ID
+}
+
+type UsersPermissionsRoleConnectionName {
+    connection: UsersPermissionsRoleConnection
+    key: String
+}
+
+type UsersPermissionsRoleConnectionType {
+    connection: UsersPermissionsRoleConnection
+    key: String
+}
+
+type UsersPermissionsRoleGroupBy {
+    description: [UsersPermissionsRoleConnectionDescription]
+    id: [UsersPermissionsRoleConnectionId]
+    name: [UsersPermissionsRoleConnectionName]
+    type: [UsersPermissionsRoleConnectionType]
+}
+
+type UsersPermissionsUser {
+    blocked: Boolean
+    confirmed: Boolean
+    created_at: DateTime!
+    email: String!
+    id: ID!
+    provider: String
+    role: UsersPermissionsRole
+    updated_at: DateTime!
+    username: String!
+}
+
+type UsersPermissionsUserAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UsersPermissionsUserConnection {
+    aggregate: UsersPermissionsUserAggregator
+    groupBy: UsersPermissionsUserGroupBy
+    values: [UsersPermissionsUser]
+}
+
+type UsersPermissionsUserConnectionBlocked {
+    connection: UsersPermissionsUserConnection
+    key: Boolean
+}
+
+type UsersPermissionsUserConnectionConfirmed {
+    connection: UsersPermissionsUserConnection
+    key: Boolean
+}
+
+type UsersPermissionsUserConnectionCreated_at {
+    connection: UsersPermissionsUserConnection
+    key: DateTime
+}
+
+type UsersPermissionsUserConnectionEmail {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionId {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionProvider {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionRole {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionUpdated_at {
+    connection: UsersPermissionsUserConnection
+    key: DateTime
+}
+
+type UsersPermissionsUserConnectionUsername {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserGroupBy {
+    blocked: [UsersPermissionsUserConnectionBlocked]
+    confirmed: [UsersPermissionsUserConnectionConfirmed]
+    created_at: [UsersPermissionsUserConnectionCreated_at]
+    email: [UsersPermissionsUserConnectionEmail]
+    id: [UsersPermissionsUserConnectionId]
+    provider: [UsersPermissionsUserConnectionProvider]
+    role: [UsersPermissionsUserConnectionRole]
+    updated_at: [UsersPermissionsUserConnectionUpdated_at]
+    username: [UsersPermissionsUserConnectionUsername]
+}
+
+type Usps {
+    activities(limit: Int, sort: String, start: Int, where: JSON): [Activity]
+    created_at: DateTime!
+    icon_name: String!
+    id: ID!
+    is_selectable: Boolean
+    key: String!
+    label: String!
+    translations: [ComponentUspTranslations]
+    updated_at: DateTime!
+}
+
+type UspsAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UspsConnection {
+    aggregate: UspsAggregator
+    groupBy: UspsGroupBy
+    values: [Usps]
+}
+
+type UspsConnectionCreated_at {
+    connection: UspsConnection
+    key: DateTime
+}
+
+type UspsConnectionIcon_name {
+    connection: UspsConnection
+    key: String
+}
+
+type UspsConnectionId {
+    connection: UspsConnection
+    key: ID
+}
+
+type UspsConnectionIs_selectable {
+    connection: UspsConnection
+    key: Boolean
+}
+
+type UspsConnectionKey {
+    connection: UspsConnection
+    key: String
+}
+
+type UspsConnectionLabel {
+    connection: UspsConnection
+    key: String
+}
+
+type UspsConnectionUpdated_at {
+    connection: UspsConnection
+    key: DateTime
+}
+
+type UspsGroupBy {
+    created_at: [UspsConnectionCreated_at]
+    icon_name: [UspsConnectionIcon_name]
+    id: [UspsConnectionId]
+    is_selectable: [UspsConnectionIs_selectable]
+    key: [UspsConnectionKey]
+    label: [UspsConnectionLabel]
+    updated_at: [UspsConnectionUpdated_at]
+}
+
+type createActivityAttributePayload {
+    activityAttribute: ActivityAttribute
+}
+
+type createActivityLocationPayload {
+    activityLocation: ActivityLocation
+}
+
+type createActivityPayload {
+    activity: Activity
+}
+
+type createActivityTypePayload {
+    activityType: ActivityType
+}
+
+type createAttributePayload {
+    attribute: Attribute
+}
+
+type createEmployeePayload {
+    employee: Employee
+}
+
+type createFaqPayload {
+    faq: Faq
+}
+
+type createListingPayload {
+    listing: Listing
+}
+
+type createOfferPayload {
+    offer: Offer
+}
+
+type createRolePayload {
+    role: UsersPermissionsRole
+}
+
+type createSupplierPayload {
+    supplier: Supplier
+}
+
+type createTextPayload {
+    text: Text
+}
+
+type createUserPayload {
+    user: UsersPermissionsUser
+}
+
+type createUspPayload {
+    usp: Usps
+}
+
+type deleteActivityAttributePayload {
+    activityAttribute: ActivityAttribute
+}
+
+type deleteActivityLocationPayload {
+    activityLocation: ActivityLocation
+}
+
+type deleteActivityPayload {
+    activity: Activity
+}
+
+type deleteActivityTypePayload {
+    activityType: ActivityType
+}
+
+type deleteAttributePayload {
+    attribute: Attribute
+}
+
+type deleteConfigPayload {
+    config: Config
+}
+
+type deleteEmployeePayload {
+    employee: Employee
+}
+
+type deleteFaqPayload {
+    faq: Faq
+}
+
+type deleteFilePayload {
+    file: UploadFile
+}
+
+type deleteListingPayload {
+    listing: Listing
+}
+
+type deleteOfferPayload {
+    offer: Offer
+}
+
+type deleteRolePayload {
+    role: UsersPermissionsRole
+}
+
+type deleteSupplierPayload {
+    supplier: Supplier
+}
+
+type deleteTextPayload {
+    text: Text
+}
+
+type deleteUserPayload {
+    user: UsersPermissionsUser
+}
+
+type deleteUspPayload {
+    usp: Usps
+}
+
+type updateActivityAttributePayload {
+    activityAttribute: ActivityAttribute
+}
+
+type updateActivityLocationPayload {
+    activityLocation: ActivityLocation
+}
+
+type updateActivityPayload {
+    activity: Activity
+}
+
+type updateActivityTypePayload {
+    activityType: ActivityType
+}
+
+type updateAttributePayload {
+    attribute: Attribute
+}
+
+type updateConfigPayload {
+    config: Config
+}
+
+type updateEmployeePayload {
+    employee: Employee
+}
+
+type updateFaqPayload {
+    faq: Faq
+}
+
+type updateListingPayload {
+    listing: Listing
+}
+
+type updateOfferPayload {
+    offer: Offer
+}
+
+type updateRolePayload {
+    role: UsersPermissionsRole
+}
+
+type updateSupplierPayload {
+    supplier: Supplier
+}
+
+type updateTextPayload {
+    text: Text
+}
+
+type updateUserPayload {
+    user: UsersPermissionsUser
+}
+
+type updateUspPayload {
+    usp: Usps
+}
+
+enum ENUM_ATTRIBUTE_DATA_TYPE {
+    boolean
+    number
+    range
+    rating
+    text
+}
+
+enum ENUM_COMPONENTACTIVITYATTRIBUTETRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTACTIVITYBENEFIT_TYPE {
+    excluded
+    included
+    offered
+}
+
+enum ENUM_COMPONENTACTIVITYLOCATIONTRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTACTIVITYTRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTACTIVITYTYPETRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTATTRIBUTETRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTEMPLOYEETRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTFAQTRANSLATIONS_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTLISTINGTRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTLOCATIONTRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTOFFERTRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTTEXTTRANSLATION_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_COMPONENTUSPTRANSLATIONS_LOCALE {
+    en_CH
+    fr_CH
+    it_CH
+}
+
+enum ENUM_LISTING_TYPE {
+    blog_post
+    destination
+    point_of_interest
+    supplier
+}
+
+enum PublicationState {
+    LIVE
+    PREVIEW
+}
+
+input ActivityAttributeInput {
+    activities: [ID]
+    attribute: ID
+    created_by: ID
+    translations: [ComponentActivityAttributeTranslationInput]
+    updated_by: ID
+    value: String!
+}
+
+input ActivityInput {
+    attribute_values: [ID]
+    content_blocks: [ComponentActivityContentBlockInput!]
+    created_by: ID
+    destination: ComponentLocationLocationInput!
+    gallery: [ID]
+    info: ComponentActivityInfoInput!
+    listings: [ID]
+    location: ID
+    meeting_points: [ComponentLocationLocationInput!]
+    migration_id: Int
+    status: String
+    supplier: ID
+    teaser_image: ID
+    translations: [ComponentActivityTranslationInput]
+    type: ID
+    updated_by: ID
+    usps: [ID]
+}
+
+input ActivityLocationInput {
+    activities: [ID]
+    children: [ID]
+    created_by: ID
+    description: String
+    faq: [ID]
+    geonames_id: String
+    listings: [ID]
+    old_slugs: JSON
+    parent: ID
+    slug: String!
+    teaser: String
+    teaser_image: ID
+    title: String!
+    translations: [ComponentActivityLocationTranslationInput]
+    updated_by: ID
+}
+
+input ActivityTypeInput {
+    activities: [ID]
+    children: [ID]
+    created_by: ID
+    description: String
+    faq: [ID]
+    icon_name: String
+    listings: [ID]
+    old_slugs: JSON
+    parent: ID
+    slug: String!
+    teaser: String
+    teaser_image: ID
+    title: String!
+    translations: [ComponentActivityTypeTranslationInput]
+    updated_by: ID
+}
+
+input AttributeInput {
+    activity_attributes: [ID]
+    created_by: ID
+    data_type: ENUM_ATTRIBUTE_DATA_TYPE
+    label: String!
+    translations: [ComponentAttributeTranslationInput]
+    unit: String
+    updated_by: ID
+}
+
+input ComponentActivityAttributeTranslationInput {
+    locale: ENUM_COMPONENTACTIVITYATTRIBUTETRANSLATION_LOCALE!
+    value: String!
+}
+
+input ComponentActivityAudienceInput {
+    age_from: Int!
+    age_to: Int
+    key: String!
+}
+
+input ComponentActivityBenefitInput {
+    text: String!
+    type: ENUM_COMPONENTACTIVITYBENEFIT_TYPE!
+}
+
+input ComponentActivityContentBlockInput {
+    text: String
+    title: String!
+    youtube_url: String
+}
+
+input ComponentActivityGalleryTranslationInput {
+    alt_text: String!
+    picture_name: String!
+}
+
+input ComponentActivityHighlightInput {
+    text: String!
+}
+
+input ComponentActivityInfoInput {
+    benefits: [ComponentActivityBenefitInput]
+    google_ads: ComponentSeoGoogleAdsInfoInput
+    highlights: [ComponentActivityHighlightInput!]
+    important_information: String
+    old_slugs: JSON
+    slug: String!
+    teaser: String!
+    title: String!
+}
+
+input ComponentActivityLocationTranslationInput {
+    description: String
+    locale: ENUM_COMPONENTACTIVITYLOCATIONTRANSLATION_LOCALE!
+    old_slugs: JSON
+    slug: String!
+    teaser: String
+    teaser_image_alt_text: String
+    title: String!
+}
+
+input ComponentActivityTranslationInput {
+    content_blocks: [ComponentActivityContentBlockInput!]
+    gallery: [ComponentActivityGalleryTranslationInput]
+    info: ComponentActivityInfoInput!
+    locale: ENUM_COMPONENTACTIVITYTRANSLATION_LOCALE!
+    teaser_image_alt_text: String
+}
+
+input ComponentActivityTypeTranslationInput {
+    description: String
+    locale: ENUM_COMPONENTACTIVITYTYPETRANSLATION_LOCALE!
+    old_slugs: JSON
+    slug: String!
+    teaser: String
+    teaser_image_alt_text: String
+    title: String!
+}
+
+input ComponentAttributeTranslationInput {
+    label: String!
+    locale: ENUM_COMPONENTATTRIBUTETRANSLATION_LOCALE!
+}
+
+input ComponentEmployeeTranslationInput {
+    aboutme: String!
+    locale: ENUM_COMPONENTEMPLOYEETRANSLATION_LOCALE!
+}
+
+input ComponentFaqTranslationInput {
+    answer: String!
+    locale: ENUM_COMPONENTFAQTRANSLATIONS_LOCALE!
+    question: String!
+}
+
+input ComponentListingContentBlockInput {
+    pictures: [ID]
+    text: String
+    youtube_url: String
+}
+
+input ComponentListingGalleryTranslationInput {
+    alt_text: String!
+    picture_name: String!
+}
+
+input ComponentListingInfoInput {
+    google_ads: ComponentSeoGoogleAdsInfoInput
+    meta_description: String
+    old_slugs: JSON
+    slug: String!
+    teaser: String
+    title: String!
+}
+
+input ComponentListingTranslationInput {
+    content_blocks: [ComponentListingContentBlockInput]
+    gallery: [ComponentListingGalleryTranslationInput]
+    info: ComponentListingInfoInput!
+    locale: ENUM_COMPONENTLISTINGTRANSLATION_LOCALE!
+    teaser_image_alt_text: String
+}
+
+input ComponentLocationInfoInput {
+    address: String!
+    label: String!
+}
+
+input ComponentLocationLocationInput {
+    info: ComponentLocationInfoInput
+    latitude: String!
+    longitude: String!
+    translations: [ComponentLocationTranslationInput]
+}
+
+input ComponentLocationTranslationInput {
+    info: [ComponentLocationInfoInput]
+    locale: ENUM_COMPONENTLOCATIONTRANSLATION_LOCALE!
+}
+
+input ComponentOfferTranslationInput {
+    description: String
+    label: String!
+    locale: ENUM_COMPONENTOFFERTRANSLATION_LOCALE!
+}
+
+input ComponentSeoGoogleAdsInfoInput {
+    description1: String!
+    description2: String
+    headline1: String!
+    headline2: String
+    headline3: String
+    path1: String
+    path2: String
+}
+
+input ComponentSupplierContactInput {
+    email: String!
+    name: String!
+    phone: String
+}
+
+input ComponentTextTranslationInput {
+    locale: ENUM_COMPONENTTEXTTRANSLATION_LOCALE!
+    value: String!
+}
+
+input ComponentUspTranslationInput {
+    label: String!
+    locale: ENUM_COMPONENTUSPTRANSLATIONS_LOCALE!
+}
+
+input ConfigInput {
+    audiences: [ComponentActivityAudienceInput!]
+    created_by: ID
+    updated_by: ID
+}
+
+input EmployeeInput {
+    aboutme: String!
+    created_by: ID
+    family_name: String!
+    given_name: String!
+    linkedin_url: String
+    picture: ID
+    role: String!
+    translations: [ComponentEmployeeTranslationInput]
+    updated_by: ID
+}
+
+input FaqInput {
+    answer: String!
+    created_by: ID
+    question: String!
+    translations: [ComponentFaqTranslationInput]
+    updated_by: ID
+}
+
+input FileInfoInput {
+    alternativeText: String
+    caption: String
+    name: String
+}
+
+input FileInput {
+    alternativeText: String
+    caption: String
+    created_by: ID
+    ext: String
+    formats: JSON
+    hash: String!
+    height: Int
+    mime: String!
+    name: String!
+    previewUrl: String
+    provider: String!
+    provider_metadata: JSON
+    related: [ID]
+    size: Float!
+    updated_by: ID
+    url: String!
+    width: Int
+}
+
+input InputID {
+    id: ID!
+}
+
+input ListingInput {
+    activities: [ID]
+    activity_types: [ID]
+    children: [ID]
+    content_blocks: [ComponentListingContentBlockInput]
+    created_by: ID
+    gallery: [ID]
+    info: ComponentListingInfoInput!
+    latitude: String
+    locations: [ID]
+    longitude: String
+    outdooractive_config: JSON
+    parent: ID
+    published_at: DateTime
+    teaser_image: ID
+    translations: [ComponentListingTranslationInput]
+    type: ENUM_LISTING_TYPE
+    updated_by: ID
+}
+
+input OfferInput {
+    created_by: ID
+    description: String
+    label: String!
+    translations: [ComponentOfferTranslationInput]
+    updated_by: ID
+}
+
+input RoleInput {
+    created_by: ID
+    description: String
+    name: String!
+    permissions: [ID]
+    type: String
+    updated_by: ID
+    users: [ID]
+}
+
+input SupplierInput {
+    audiences: [ComponentActivityAudienceInput]
+    contact: ComponentSupplierContactInput
+    country_code: String
+    created_by: ID
+    migration_id: Int
+    name: String!
+    updated_by: ID
+    website: String
+}
+
+input TextInput {
+    created_by: ID
+    key: String!
+    translations: [ComponentTextTranslationInput]
+    updated_by: ID
+    value: String!
+}
+
+input UserInput {
+    blocked: Boolean
+    confirmationToken: String
+    confirmed: Boolean
+    created_by: ID
+    email: String!
+    password: String
+    provider: String
+    resetPasswordToken: String
+    role: ID
+    updated_by: ID
+    username: String!
+}
+
+input UsersPermissionsLoginInput {
+    identifier: String!
+    password: String!
+    provider: String = "local"
+}
+
+input UsersPermissionsRegisterInput {
+    email: String!
+    password: String!
+    username: String!
+}
+
+input UspInput {
+    activities: [ID]
+    created_by: ID
+    icon_name: String!
+    is_selectable: Boolean
+    key: String!
+    label: String!
+    translations: [ComponentUspTranslationInput]
+    updated_by: ID
+}
+
+input createActivityAttributeInput {
+    data: ActivityAttributeInput
+}
+
+input createActivityInput {
+    data: ActivityInput
+}
+
+input createActivityLocationInput {
+    data: ActivityLocationInput
+}
+
+input createActivityTypeInput {
+    data: ActivityTypeInput
+}
+
+input createAttributeInput {
+    data: AttributeInput
+}
+
+input createEmployeeInput {
+    data: EmployeeInput
+}
+
+input createFaqInput {
+    data: FaqInput
+}
+
+input createListingInput {
+    data: ListingInput
+}
+
+input createOfferInput {
+    data: OfferInput
+}
+
+input createRoleInput {
+    data: RoleInput
+}
+
+input createSupplierInput {
+    data: SupplierInput
+}
+
+input createTextInput {
+    data: TextInput
+}
+
+input createUserInput {
+    data: UserInput
+}
+
+input createUspInput {
+    data: UspInput
+}
+
+input deleteActivityAttributeInput {
+    where: InputID
+}
+
+input deleteActivityInput {
+    where: InputID
+}
+
+input deleteActivityLocationInput {
+    where: InputID
+}
+
+input deleteActivityTypeInput {
+    where: InputID
+}
+
+input deleteAttributeInput {
+    where: InputID
+}
+
+input deleteEmployeeInput {
+    where: InputID
+}
+
+input deleteFaqInput {
+    where: InputID
+}
+
+input deleteFileInput {
+    where: InputID
+}
+
+input deleteListingInput {
+    where: InputID
+}
+
+input deleteOfferInput {
+    where: InputID
+}
+
+input deleteRoleInput {
+    where: InputID
+}
+
+input deleteSupplierInput {
+    where: InputID
+}
+
+input deleteTextInput {
+    where: InputID
+}
+
+input deleteUserInput {
+    where: InputID
+}
+
+input deleteUspInput {
+    where: InputID
+}
+
+input editActivityAttributeInput {
+    activities: [ID]
+    attribute: ID
+    created_by: ID
+    translations: [editComponentActivityAttributeTranslationInput]
+    updated_by: ID
+    value: String
+}
+
+input editActivityInput {
+    attribute_values: [ID]
+    content_blocks: [editComponentActivityContentBlockInput]
+    created_by: ID
+    destination: editComponentLocationLocationInput
+    gallery: [ID]
+    info: editComponentActivityInfoInput
+    listings: [ID]
+    location: ID
+    meeting_points: [editComponentLocationLocationInput]
+    migration_id: Int
+    status: String
+    supplier: ID
+    teaser_image: ID
+    translations: [editComponentActivityTranslationInput]
+    type: ID
+    updated_by: ID
+    usps: [ID]
+}
+
+input editActivityLocationInput {
+    activities: [ID]
+    children: [ID]
+    created_by: ID
+    description: String
+    faq: [ID]
+    geonames_id: String
+    listings: [ID]
+    old_slugs: JSON
+    parent: ID
+    slug: String
+    teaser: String
+    teaser_image: ID
+    title: String
+    translations: [editComponentActivityLocationTranslationInput]
+    updated_by: ID
+}
+
+input editActivityTypeInput {
+    activities: [ID]
+    children: [ID]
+    created_by: ID
+    description: String
+    faq: [ID]
+    icon_name: String
+    listings: [ID]
+    old_slugs: JSON
+    parent: ID
+    slug: String
+    teaser: String
+    teaser_image: ID
+    title: String
+    translations: [editComponentActivityTypeTranslationInput]
+    updated_by: ID
+}
+
+input editAttributeInput {
+    activity_attributes: [ID]
+    created_by: ID
+    data_type: ENUM_ATTRIBUTE_DATA_TYPE
+    label: String
+    translations: [editComponentAttributeTranslationInput]
+    unit: String
+    updated_by: ID
+}
+
+input editComponentActivityAttributeTranslationInput {
+    id: ID
+    locale: ENUM_COMPONENTACTIVITYATTRIBUTETRANSLATION_LOCALE
+    value: String
+}
+
+input editComponentActivityAudienceInput {
+    age_from: Int
+    age_to: Int
+    id: ID
+    key: String
+}
+
+input editComponentActivityBenefitInput {
+    id: ID
+    text: String
+    type: ENUM_COMPONENTACTIVITYBENEFIT_TYPE
+}
+
+input editComponentActivityContentBlockInput {
+    id: ID
+    text: String
+    title: String
+    youtube_url: String
+}
+
+input editComponentActivityGalleryTranslationInput {
+    alt_text: String
+    id: ID
+    picture_name: String
+}
+
+input editComponentActivityHighlightInput {
+    id: ID
+    text: String
+}
+
+input editComponentActivityInfoInput {
+    benefits: [editComponentActivityBenefitInput]
+    google_ads: editComponentSeoGoogleAdsInfoInput
+    highlights: [editComponentActivityHighlightInput]
+    id: ID
+    important_information: String
+    old_slugs: JSON
+    slug: String
+    teaser: String
+    title: String
+}
+
+input editComponentActivityLocationTranslationInput {
+    description: String
+    id: ID
+    locale: ENUM_COMPONENTACTIVITYLOCATIONTRANSLATION_LOCALE
+    old_slugs: JSON
+    slug: String
+    teaser: String
+    teaser_image_alt_text: String
+    title: String
+}
+
+input editComponentActivityTranslationInput {
+    content_blocks: [editComponentActivityContentBlockInput]
+    gallery: [editComponentActivityGalleryTranslationInput]
+    id: ID
+    info: editComponentActivityInfoInput
+    locale: ENUM_COMPONENTACTIVITYTRANSLATION_LOCALE
+    teaser_image_alt_text: String
+}
+
+input editComponentActivityTypeTranslationInput {
+    description: String
+    id: ID
+    locale: ENUM_COMPONENTACTIVITYTYPETRANSLATION_LOCALE
+    old_slugs: JSON
+    slug: String
+    teaser: String
+    teaser_image_alt_text: String
+    title: String
+}
+
+input editComponentAttributeTranslationInput {
+    id: ID
+    label: String
+    locale: ENUM_COMPONENTATTRIBUTETRANSLATION_LOCALE
+}
+
+input editComponentEmployeeTranslationInput {
+    aboutme: String
+    id: ID
+    locale: ENUM_COMPONENTEMPLOYEETRANSLATION_LOCALE
+}
+
+input editComponentFaqTranslationInput {
+    answer: String
+    id: ID
+    locale: ENUM_COMPONENTFAQTRANSLATIONS_LOCALE
+    question: String
+}
+
+input editComponentListingContentBlockInput {
+    id: ID
+    pictures: [ID]
+    text: String
+    youtube_url: String
+}
+
+input editComponentListingGalleryTranslationInput {
+    alt_text: String
+    id: ID
+    picture_name: String
+}
+
+input editComponentListingInfoInput {
+    google_ads: editComponentSeoGoogleAdsInfoInput
+    id: ID
+    meta_description: String
+    old_slugs: JSON
+    slug: String
+    teaser: String
+    title: String
+}
+
+input editComponentListingTranslationInput {
+    content_blocks: [editComponentListingContentBlockInput]
+    gallery: [editComponentListingGalleryTranslationInput]
+    id: ID
+    info: editComponentListingInfoInput
+    locale: ENUM_COMPONENTLISTINGTRANSLATION_LOCALE
+    teaser_image_alt_text: String
+}
+
+input editComponentLocationInfoInput {
+    address: String
+    id: ID
+    label: String
+}
+
+input editComponentLocationLocationInput {
+    id: ID
+    info: editComponentLocationInfoInput
+    latitude: String
+    longitude: String
+    translations: [editComponentLocationTranslationInput]
+}
+
+input editComponentLocationTranslationInput {
+    id: ID
+    info: [editComponentLocationInfoInput]
+    locale: ENUM_COMPONENTLOCATIONTRANSLATION_LOCALE
+}
+
+input editComponentOfferTranslationInput {
+    description: String
+    id: ID
+    label: String
+    locale: ENUM_COMPONENTOFFERTRANSLATION_LOCALE
+}
+
+input editComponentSeoGoogleAdsInfoInput {
+    description1: String
+    description2: String
+    headline1: String
+    headline2: String
+    headline3: String
+    id: ID
+    path1: String
+    path2: String
+}
+
+input editComponentSupplierContactInput {
+    email: String
+    id: ID
+    name: String
+    phone: String
+}
+
+input editComponentTextTranslationInput {
+    id: ID
+    locale: ENUM_COMPONENTTEXTTRANSLATION_LOCALE
+    value: String
+}
+
+input editComponentUspTranslationInput {
+    id: ID
+    label: String
+    locale: ENUM_COMPONENTUSPTRANSLATIONS_LOCALE
+}
+
+input editConfigInput {
+    audiences: [editComponentActivityAudienceInput]
+    created_by: ID
+    updated_by: ID
+}
+
+input editEmployeeInput {
+    aboutme: String
+    created_by: ID
+    family_name: String
+    given_name: String
+    linkedin_url: String
+    picture: ID
+    role: String
+    translations: [editComponentEmployeeTranslationInput]
+    updated_by: ID
+}
+
+input editFaqInput {
+    answer: String
+    created_by: ID
+    question: String
+    translations: [editComponentFaqTranslationInput]
+    updated_by: ID
+}
+
+input editFileInput {
+    alternativeText: String
+    caption: String
+    created_by: ID
+    ext: String
+    formats: JSON
+    hash: String
+    height: Int
+    mime: String
+    name: String
+    previewUrl: String
+    provider: String
+    provider_metadata: JSON
+    related: [ID]
+    size: Float
+    updated_by: ID
+    url: String
+    width: Int
+}
+
+input editListingInput {
+    activities: [ID]
+    activity_types: [ID]
+    children: [ID]
+    content_blocks: [editComponentListingContentBlockInput]
+    created_by: ID
+    gallery: [ID]
+    info: editComponentListingInfoInput
+    latitude: String
+    locations: [ID]
+    longitude: String
+    outdooractive_config: JSON
+    parent: ID
+    published_at: DateTime
+    teaser_image: ID
+    translations: [editComponentListingTranslationInput]
+    type: ENUM_LISTING_TYPE
+    updated_by: ID
+}
+
+input editOfferInput {
+    created_by: ID
+    description: String
+    label: String
+    translations: [editComponentOfferTranslationInput]
+    updated_by: ID
+}
+
+input editRoleInput {
+    created_by: ID
+    description: String
+    name: String
+    permissions: [ID]
+    type: String
+    updated_by: ID
+    users: [ID]
+}
+
+input editSupplierInput {
+    audiences: [editComponentActivityAudienceInput]
+    contact: editComponentSupplierContactInput
+    country_code: String
+    created_by: ID
+    migration_id: Int
+    name: String
+    updated_by: ID
+    website: String
+}
+
+input editTextInput {
+    created_by: ID
+    key: String
+    translations: [editComponentTextTranslationInput]
+    updated_by: ID
+    value: String
+}
+
+input editUserInput {
+    blocked: Boolean
+    confirmationToken: String
+    confirmed: Boolean
+    created_by: ID
+    email: String
+    password: String
+    provider: String
+    resetPasswordToken: String
+    role: ID
+    updated_by: ID
+    username: String
+}
+
+input editUspInput {
+    activities: [ID]
+    created_by: ID
+    icon_name: String
+    is_selectable: Boolean
+    key: String
+    label: String
+    translations: [editComponentUspTranslationInput]
+    updated_by: ID
+}
+
+input updateActivityAttributeInput {
+    data: editActivityAttributeInput
+    where: InputID
+}
+
+input updateActivityInput {
+    data: editActivityInput
+    where: InputID
+}
+
+input updateActivityLocationInput {
+    data: editActivityLocationInput
+    where: InputID
+}
+
+input updateActivityTypeInput {
+    data: editActivityTypeInput
+    where: InputID
+}
+
+input updateAttributeInput {
+    data: editAttributeInput
+    where: InputID
+}
+
+input updateConfigInput {
+    data: editConfigInput
+}
+
+input updateEmployeeInput {
+    data: editEmployeeInput
+    where: InputID
+}
+
+input updateFaqInput {
+    data: editFaqInput
+    where: InputID
+}
+
+input updateListingInput {
+    data: editListingInput
+    where: InputID
+}
+
+input updateOfferInput {
+    data: editOfferInput
+    where: InputID
+}
+
+input updateRoleInput {
+    data: editRoleInput
+    where: InputID
+}
+
+input updateSupplierInput {
+    data: editSupplierInput
+    where: InputID
+}
+
+input updateTextInput {
+    data: editTextInput
+    where: InputID
+}
+
+input updateUserInput {
+    data: editUserInput
+    where: InputID
+}
+
+input updateUspInput {
+    data: editUspInput
+    where: InputID
+}
+
+
+"The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSON
+
+"A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar DateTime
+
+"A time string with format: HH:mm:ss.SSS"
+scalar Time
+
+"A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar Date
+
+"The `Long` scalar type represents 52-bit integers"
+scalar Long
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload

@@ -1,0 +1,61 @@
+@import "mixins";
+
+.controlButtons {
+  @include mobile() {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    // margin-top: 10px;
+  }
+
+  .controlContent {
+    display: flex;
+    position: relative;
+  }
+
+  .sharePopup {
+    position: absolute;
+    right: 10px;
+    top: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    z-index: 2;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 2px 2px 12px 0px #00000008, -2px 2px 12px 0px #00000008;
+  }
+
+  .icon {
+    color: #3B3B3B;
+
+    @include mobile() {
+      color: #626262;
+    }
+  }
+
+  .button {
+    align-items: center;
+    background: none;
+    border: 0;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    margin-left: 5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .buttonText {
+      margin-left: 10px;
+      padding-top: 2px;
+
+      @include mobile() {
+        display: none;
+      }
+    }
+  }
+}

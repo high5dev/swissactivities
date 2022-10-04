@@ -1,0 +1,32 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  ;
+  flex-direction: column;
+
+  .titleImage {
+    max-width: 85px;
+    width: 85px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .subTitle {
+    margin-top: 10px;
+  }
+
+  .submitButton {
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+  }
+}

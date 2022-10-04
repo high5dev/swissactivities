@@ -1,0 +1,48 @@
+@import "mixins";
+
+.tabsContainer {
+  background: #FFFFFF;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 38px;
+  position: relative;
+
+  .tab {
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 20px;
+
+  }
+
+  .line {
+    position: absolute;
+    border-bottom: 2px solid #E5E5E5;
+    width: 100%;
+    bottom: 1px;
+    z-index: 0;
+  }
+}
+.tab {
+  color: RGBA(163, 163, 163, 1);
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.1s linear;
+  &.active {
+    color: RGBA(254, 80, 79, 1);
+
+    .tabContet {
+      border-color: #FE504F;
+    }
+  }
+
+  .tabContet {
+    padding-bottom: 12px;
+    line-height: 1.5;
+    left: 0;
+    transition: border-color 0.1s linear;
+    border-bottom: 2px solid #E5E5E5;
+  }
+}
+

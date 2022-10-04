@@ -1,0 +1,206 @@
+.container {
+
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px 0 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  transition-duration: 200ms;
+  cursor: pointer;
+  margin: 15px;
+  box-shadow: 1px 0 12px rgb(0 0 0 / 13%);
+
+
+  &:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 768px) {
+        margin: 5px;
+
+
+  }
+
+  .activity {
+    display: flex;
+    justify-content: stretch;
+  }
+
+  .teaserImage {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 150px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    img {
+      border-radius: 6px;
+
+      @media screen and (max-width: 768px) {
+        border-radius: 0px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 100px;
+      min-width: 80px;
+      height: 100px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 150px;
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .body__main {
+      min-width: 94%;
+      flex-grow: 1;
+      padding-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 5px;
+      width: min-content;
+      min-width: 100%;
+
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+
+      em {
+        font-style: normal;
+        background-color: yellow;
+      }
+    }
+    .attributes {
+      margin-top: 5px;
+      white-space: nowrap;
+      display: flex;
+      flex-wrap: wrap;
+      width: min-content;
+      min-width: 100%;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #003049;
+        padding: 2px 5px;
+        margin: 3px;
+        text-decoration: underline;
+
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      align-items: flex-end;
+      padding: 0 15px 15px 5px;
+      @media (max-width: 768px) {
+        justify-content: flex-end;
+        width: 100%;
+        flex-direction: row;
+        padding: 0 10px 10px 5px;
+      }
+
+      .info__price {
+        font-size: 16px;
+        text-align: right;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+
+          .priceFrom {
+            padding: 0 !important;
+          }
+        }
+
+        .priceFrom {
+          margin-right: 5px;
+          color: #888;
+          font-weight: 500;
+          white-space: nowrap;
+          line-height: 1;
+        }
+
+        .person{
+          color: #888;
+          line-height: 1;
+        }
+
+        .priceValue {
+          color: #000;
+          font-size: 1.5em;
+          font-weight: 600;
+          white-space: nowrap;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .btn__proceed {
+    width: 10px;
+    height: 10px;
+    border-right: 3px solid #aaa;
+    border-bottom: 3px solid #aaa;
+    transform: rotate(-45deg);
+    margin-top: 25px;
+    flex-shrink: 0;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .teaser {
+    color: #828282;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    height: 60px;
+    margin: 5px;
+
+    em {
+      font-style: normal;
+      background-color: yellow;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

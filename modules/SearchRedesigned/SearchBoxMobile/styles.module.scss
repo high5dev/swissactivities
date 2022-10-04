@@ -1,0 +1,61 @@
+
+.searchBox{
+  width: 100%;
+  font-size: 14px;
+  padding: 15px;
+  background: #002f49;
+  border: 0;
+
+  .icon {
+    color: #002f49;
+  }
+}
+
+.searchBoxContent{
+  border-radius: 4px;
+  box-shadow: 0 0 3px 1px #363636;
+}
+.searchWrapper{
+  width: 100%;
+  border: 0;
+}
+.searchInput{
+  width: 100%;
+  font-size: 16px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 0;
+  border: 0;
+  &:focus, &:active, &:hover {
+    border: 0;
+  }
+}
+
+.image {
+  font-size: 16px;
+}
+
+.options {
+  background: #e6e6e6;
+  width: 100%;
+  padding: 10px 0;
+  flex-basis: 50%;
+  display: flex;
+}
+.optionsSection {
+  width: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.optionsContent {
+  margin-left: 5px;
+}
+
+.calendarModal {
+  width: 95%;
+  .calendarModalContainer {
+    height: 375px;
+  }
+}

@@ -1,0 +1,136 @@
+.filterContainer {
+  width: 25%;
+  max-width: 335px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.11);
+  border-radius: 12px;
+  height: fit-content;
+  transform: none;
+
+  &.visible {
+    transform: translateX(0%);;
+    transition-duration: 0.5s;
+  }
+
+  @media (max-width: 1024px) {
+    // position: absolute;
+    // z-index: 2;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 5;
+    width: auto;
+    border-radius: 0;
+  }
+  @media (max-width: 512px) {
+    width: 100%;
+    top: 62px;
+    max-width: none;
+    box-shadow: none;
+    z-index: 3;
+    overflow-y: auto;
+    height: calc(100vh - 62px);
+    padding-bottom: 20px;
+    transform: translateX(-100%);
+  }
+  .searchField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 13px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #E5E5E5;
+    @media (max-width: 1024px) {
+      margin: 0 24px;
+    }
+    .searchHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      width: 100%;
+
+      &.disabled {
+        cursor: default;
+      }
+      .collapseIcon {
+        font-size: 20px;
+        display: none;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    .searchTitle {
+
+      padding: 7px 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+    }
+    .searchContent {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      p.activityItem {
+        padding-left: 10px;
+        a {
+          color: #FE504F;
+        }
+      }
+      p {
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+      }
+      img {
+        padding: 7px;
+      }
+    }
+  }
+}
+
+.abbr {
+  text-decoration: underline;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #003049;
+  margin-top: 24px;
+  cursor: pointer;
+  svg {
+    width: 17px;
+    height: 17px;
+    color: #fe6d6c;
+  }
+}
+
+.filterButton {
+  box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.3);
+  top: 50% !important;
+  transform: rotate(-90deg) translateY(100%);
+  transition-duration: 300ms;
+  left: unset !important;
+  right: -10px;
+
+  &.hidden {
+    right: -100px;
+  }
+}
+
+.applyBtn{
+  display: block;
+  margin: 30px auto 0 auto;
+
+  @media (min-width: 512px) {
+    display: none;
+  }
+}
+

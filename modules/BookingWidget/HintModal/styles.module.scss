@@ -1,0 +1,76 @@
+.modal {
+  width: 100%;
+  padding: 0;
+  bottom: 0;
+  top:auto;
+  transform: translate(-50%, 0);
+
+  .modalContainer {
+    border-radius: 0;
+    padding-top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    height: auto;
+    padding: 5px 10px 20px 15px;
+  }
+
+  .header {
+    text-align: right;
+    line-height: 1;
+    .close {
+      background: none;
+      border: none;
+      border-radius: 0;
+      color: #3b3b3b;
+      font-size: 36px;
+      padding: 0;
+    }
+  }
+  .body {
+    font-size: 16px;
+    color:#3b3b3b;
+    line-height: 1.4;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .subTitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  .listItem {
+    margin-top: 15px;
+    display: flex;
+  }
+  .listMark {
+    color: #002f49;
+    border: 2px solid #002f49;
+    border-radius: 50%;
+    font-size: 26px;
+    min-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    max-width: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: 10px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .listText {
+    padding-top: 3px;
+  }
+}
+

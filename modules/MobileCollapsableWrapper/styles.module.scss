@@ -1,0 +1,118 @@
+@keyframes hide {
+  0%{
+    max-height: 600px;
+  }
+  100%{
+    max-height: 150px;
+  }
+}
+@keyframes open {
+  0%{
+    max-height: 150px;
+  }
+  100%{
+    max-height: 500px;
+  }
+}
+@keyframes buttonOpen {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes buttonHide {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 513px) {
+  .viewButton {
+    display: none;
+  }
+}
+@media (max-width: 512px) {
+  .collapsable {
+    position: relative;
+    transition: padding 0.2s linear;
+    max-height: none;
+    overflow-y: hidden;
+    min-height: 150px;
+    max-height: 150px;
+
+    &.collapsed {
+      animation: hide 0.2s linear;
+      max-height: 150px;
+      margin-bottom: 15px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2em;
+        width: 100%;
+        background: rgb(255,255,255);
+        background: linear-gradient(rgba(255,255,255, 0) 10%, rgba(255,255,255,1) 80%);
+      }
+    }
+
+    &.open {
+      animation: open 0.2s linear;
+      max-height: none;
+      padding-bottom: 2em;
+      margin-bottom: 15px;
+    }
+  }
+
+  .viewButton {
+    background: #fff;
+    border: none;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    padding: 0px 10px 7px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0px;
+    text-align: right;
+    z-index: 1;
+
+    &:hover {
+      color: #3b3b3b;
+    }
+    &.collapsed {
+      animation: buttonHide 0.2s linear;
+    }
+    &.open {
+      animation: buttonOpen 0.2s linear;
+      svg {
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+
+    svg {
+      stroke-width: 2;
+      font-size: 18px;
+      transition: transform 0.2s ease-in;
+    }
+  }
+}
+
+

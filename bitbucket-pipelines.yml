@@ -1,0 +1,76 @@
+image: node:12.22.3
+
+definitions:
+  caches:
+    nextcache-staging: .next/cache
+    nextcache-prod: .next/cache
+
+pipelines:
+  branches:
+    '{main,staging/*}':
+      - step:
+          name: Build staging
+          caches:
+            - node
+            - nextcache-staging
+          script:
+            - rm -rf .next
+            - yarn
+            - yarn load-data
+            - yarn products-list
+            - UPDATE_ALGOLIA=1 yarn build
+            - tar -czf /tmp/staging.tar.gz .
+            - mv /tmp/staging.tar.gz .
+          artifacts:
+            - staging.tar.gz
+      - step:
+          name: Deploy staging
+          deployment: Staging
+          script:
+            - ssh root@staging.swissactivities.com "mkdir /app/website/releases/$BITBUCKET_BUILD_NUMBER"
+            - scp staging.tar.gz root@staging.swissactivities.com:/app/website/releases/$BITBUCKET_BUILD_NUMBER
+            - ssh root@staging.swissactivities.com "cd /app/website/releases/$BITBUCKET_BUILD_NUMBER && tar xvf staging.tar.gz && rm staging.tar.gz"
+            - ssh root@staging.swissactivities.com "cd /app/website/releases && rm current && ln -s $BITBUCKET_BUILD_NUMBER current"
+            - ssh root@staging.swissactivities.com "service sa-website restart"
+            - ssh root@staging.swissactivities.com "cd /app/website/releases && ls | sort -n | tail -n +2 | head -n -2 | xargs --no-run-if-empty rm -rf"
+      - step:
+          size: 2x
+          name: Build production
+          caches:
+            - node
+            - nextcache-prod
+          script:
+            - rm -rf .next
+            - yarn
+            - yarn load-data:prod
+            - yarn products-list:prod
+            - UPDATE_ALGOLIA=1 yarn build:prod
+            - tar -czf /tmp/prod.tar.gz .
+            - mv /tmp/prod.tar.gz .
+            - split -n 3 prod.tar.gz "prod.tar.gz.part"
+          artifacts:
+            - prod.tar.gz.partaa
+            - prod.tar.gz.partab
+            - prod.tar.gz.partac
+      - step:
+          trigger: manual
+          name: Deploy production
+          deployment: Production
+          script:
+            - cat prod.tar.gz.part* > /tmp/prod.tar.gz
+            - ssh root@web.swissactivities.com "mkdir /apps/website/releases/$BITBUCKET_BUILD_NUMBER"
+            - scp /tmp/prod.tar.gz root@web.swissactivities.com:/apps/website/releases/$BITBUCKET_BUILD_NUMBER
+            - ssh root@web.swissactivities.com "cd /apps/website/releases/$BITBUCKET_BUILD_NUMBER && tar xvf prod.tar.gz && rm prod.tar.gz"
+            - ssh root@web.swissactivities.com "cd /apps/website/releases && rm current && ln -s $BITBUCKET_BUILD_NUMBER current"
+            - ssh root@web.swissactivities.com "service sa-website restart"
+            - ssh root@web.swissactivities.com "cd /apps/website/releases && ls | sort -n | tail -n +2 | head -n -2 | xargs --no-run-if-empty rm -rf"
+      - step:
+          name: Notify
+          script:
+            - pipe: sentryio/sentry-new-release:0.3.0
+              variables:
+                SENTRY_AUTH_TOKEN: $SENTRY_AUTH_TOKEN
+                SENTRY_ORG: swiss-activities
+                SENTRY_PROJECT: website
+                ENVIRONMENT: production
+                DEBUG: 'true'

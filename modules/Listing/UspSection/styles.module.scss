@@ -1,0 +1,61 @@
+.listingUspContainer {
+  display: flex;
+  width: 100%;
+  margin: 60px 0;
+  @media(max-width: 1000px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 14px 0 16px;
+  }
+}
+
+.listingUspItem {
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  width: 25%;
+  margin-right: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #3b3b3b;
+  font-weight: 500;
+
+  @media(max-width: 1000px) {
+    width: 48%;
+    margin: 10px 0;
+  }
+  @media(max-width: 512px) {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .icon {
+    @media(max-width: 512px) {
+      height: 32px;
+      max-width: 32px;
+      max-height: 32px;
+    }
+  }
+  .bigIcon {
+    @media(max-width: 512px) {
+      max-width: 100px;
+    }
+
+  }
+  .title {
+    padding-left: 15px;
+    @media(max-width: 512px) {
+      padding-left: 0;
+      padding-top: 12px;
+    }
+  }
+
+}

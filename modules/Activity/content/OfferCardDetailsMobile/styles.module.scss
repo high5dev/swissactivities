@@ -1,0 +1,143 @@
+@import "mixins";
+
+.detailsCard {
+  background: #fff;
+  display: none;
+  color: #828282;
+  @include mobile() {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    margin-top: 12px;
+
+    .includesText {
+      margin-left: 5px;
+      padding-top: 0.1rem;
+    }
+    .highlightText {
+      padding-top: 0.1rem;
+    }
+  }
+
+  .detailsItem {
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    padding: 0 6px;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    .title {
+      color: #828282;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    :global(.uspDate) {
+      text-decoration: none;
+      font-weight: 400;
+      cursor: auto;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .includedIconWrapper {
+    padding-top: 0.1rem;
+    height: 20px;
+  }
+  .viewAll {
+    color: #3b3b3b;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 12px;
+    text-decoration: underline;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.active {
+      color: #FF385C;
+    }
+  }
+  .icon {
+    min-width: 20px;
+    max-height: 20px;
+    object-fit: cover;
+  }
+}
+
+//Accordion styles
+.accordion {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+
+  overflow: hidden;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &.open{
+    z-index: 1;
+  }
+
+  &.radioAccordion {
+    padding: 24px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    &:last-child {
+      border: none;
+    }
+  }
+  .accordionTitle {
+    color: #002F49;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 0;
+    transition: margin-bottom 0.2s linear;
+    width: 100%;
+
+    h2 {
+      display: flex;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    svg {
+      stroke-width: 2;
+
+    }
+  }
+  .accordionBody {
+    background-color: #F5F8FA;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s linear;
+    &.radio {
+      padding-left: 30px;
+    }
+    &.open {
+      overflow: unset;
+      max-height: none;
+      height: auto;
+      transition: max-height 0.3s linear;
+      padding: 8px 16px 16px;
+      &.card-body {
+        display: flex;
+      }
+    }
+  }
+}

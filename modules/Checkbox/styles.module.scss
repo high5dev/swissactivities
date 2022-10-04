@@ -1,0 +1,20 @@
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  padding-left: 8px;
+
+  .label {
+
+    font-size: 14px;
+    color: #3b3b3b;
+    padding: 0 8px;
+    font-weight: 400;
+  }
+  .checkBox {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 0;
+    cursor: pointer;
+  }
+}

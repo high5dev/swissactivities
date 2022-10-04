@@ -1,0 +1,10 @@
+.rangeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .output {
+
+    margin: 8px 0 0;
+    color: RGBA(0, 0, 0, 0.5);
+  }
+}

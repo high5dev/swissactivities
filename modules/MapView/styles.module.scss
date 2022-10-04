@@ -1,0 +1,160 @@
+@keyframes zoominout {
+  0% {
+    transform: scale(0,0);
+  }
+  50% {
+    transform: scale(1.05,1.05);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+.mobileMapView {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-width: 20%;
+  max-width: 500px;
+  max-height: 130px;
+  border-radius: 8px;
+
+  @media (max-width: 512px) {
+    display: block;
+    margin: 18px 24px;
+    padding: 0 ;
+  }
+
+  & > div:last-child{
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 110;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+}
+
+.mapListViewContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  animation: zoominout 1s;
+
+  .mapListViewContent {
+    width: 90%;
+    position: relative;
+    min-width: 350px;
+    height: 97%;
+    min-height: 400px;
+    margin: auto;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.11);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+
+    .activitiesList {
+
+      position: relative;
+      max-width: 750px;
+
+      .listBody {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        background-color: #F7F7F7;
+        position: relative;
+        @media (max-width: 512px) {
+          top: 44px;
+          position: absolute;
+          z-index: 1;
+        }
+      }
+    }
+    .mapView {
+      position: relative;
+      width: 100%;
+
+      .show {
+        position: absolute;
+        padding: 8px;
+        background: #FFF;
+        border-radius: 25px;
+        left: 5px;
+        top: 5px;
+        cursor: pointer;
+        z-index: 2;
+        @media (max-width: 512px) {
+          display: none;
+        }
+      }
+
+      .mobileList {
+        display: none;
+        position: absolute;
+        padding: 13px;
+        background: #FFF;
+        cursor: pointer;
+        z-index: 2;
+
+        span {
+          padding: 0 10px;
+        }
+
+        border-left: 1px solid rgba(0, 0, 0, 0.3);
+        @media (max-width: 512px) {
+          display: flex;
+          justify-content: center;
+          width: 50%;
+          top: 0;
+          right: 0;
+          font-weight: 500;
+        }
+      }
+
+      [id="close"] {
+        position: absolute;
+        padding: 8px;
+        background: #FFF;
+        border-radius: 25px;
+        right: 20px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 2;
+        box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+      }
+    }
+  }
+}
+
+.mobileMapViewActivity {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+ margin: 0 0 0 24px;
+  min-width: 20%;
+  max-width: 200px;
+  max-height: 80px;
+
+  @media (max-width: 512px) {
+    display: block;
+    margin: 18px 24px;
+    padding: 0 ;
+  }
+
+  & > div:last-child{
+    width: 100%;
+  }
+}

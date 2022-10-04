@@ -1,0 +1,177 @@
+body {
+  line-height: 1;
+}
+
+.footer-container {
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    padding: 0 16px;
+  }
+}
+
+.copyright-container {
+  justify-content: center;
+  align-items: center;
+  .welcome {
+    padding: 0 10px;
+  }
+  a {
+    color: #FE504F;
+    &:hover {
+      color: white;
+    }
+  }
+  @media (max-width: 768px) {
+    div {
+      padding: 5px 10px;
+    }
+  }
+}
+
+.search-item {
+  @media (max-width: 512px) {
+    button {
+      border-right: none !important;
+      width: 100%;
+    }
+  }
+}
+
+#tabs {
+  @media (max-width: 512px) {
+    display: none;
+  }
+}
+
+#contents {
+  .container {
+    @media (max-width: 512px) {
+      padding: 0px;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.content-bar, .right-sidebar {
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    #subscribe {
+      display: none;
+    }
+  }
+}
+
+.content-bar {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+#bookingContent {
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .content-bar,
+    .right-sidebar {
+      margin: 0 0 20px;
+      border-radius: 0px;
+      width: 100%;
+    }
+  }
+}
+
+
+.personal-detail {
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.card-body {
+  @media (max-width: 768px) {
+    .card-detail {
+      width: 100%;
+    }
+  }
+}
+
+.members-container, .contact-us-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+  @media (max-width: 512px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-us-container {
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+  }
+  .contact-us-field {
+    width: calc(50% - 28px);
+    min-height: 480px;
+    @media (max-width: 768px) {
+      width: 100%;
+      &:last-child {
+        padding: 24px 0 0;
+      }
+    }
+    .contact-map {
+      width: 100%;
+      height: 85%;
+      @media (max-width: 512px) {
+        height: 450px;
+      }
+    }
+  }
+}
+
+#advantage {
+  @media (max-width: 512px) {
+    display: none;
+  }
+}
+
+#advantage-mobile {
+  display: none;
+  @media (max-width: 512px) {
+    display: block;
+    margin-top: 24px;
+  }
+}
+#mapViewHeader {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.mobile-filter-sidebar-header {
+  display: none;
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 0px 24px;
+    width: 100%;
+    span {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+
+    }
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+.feature-container {
+  @media (max-width: 512px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,14 @@
+.placeContent {
+  display: flex;
+  padding: 16px 0 6px;
+  align-items: flex-start;
+  .title {
+    padding: 5px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #3B3B3B;
+  }
+}

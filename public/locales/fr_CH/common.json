@@ -1,0 +1,1069 @@
+{
+  "menu": {
+    "search": "Chercher",
+    "blog": "Blog",
+    "aboutus": "À propos de nous",
+    "contactus": "Contactez-nous",
+    "signin": "Connexion",
+    "switzerland": "Suisse",
+    "help": "Chat",
+    "ask": "Questions?",
+    "voucher": "Voucher",
+    "partners": "Partners",
+    "provider": "Bon",
+    "affiliate": "Affiliatepartner"
+  },
+  "locales": {
+    "de_CH": {
+      "name": "Deutsch"
+    },
+    "en_CH": {
+      "name": "English"
+    },
+    "fr_CH": {
+      "name": "Français"
+    },
+    "it_CH": {
+      "name": "Italiano"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Swiss Activities -Cherche et réserve ton activité",
+      "description": "Trouve l'activité qui te convient sur Swiss Activities et compare et choisis parmi plus de 400 activités de loisirs.",
+      "switzerland": {
+        "title": "Destination Suisse",
+        "description": "En tant que pays relativement petit, la Suisse ne cesse de surprendre par sa remarquable diversité. Quatre langues officielles sont parlées sur à peine 40 000 kilomètres carrés et le climat varie entre le froid arctique en hiver et la chaleur méditerranéenne en été. Avec plus de 1 500 lacs, la Suisse est considérée comme le château d'eau de l'Europe et les Alpes représentent plus de 50 % de la masse terrestre. Si vous avez déjà commencé votre journée sur le Rhin à Bâle et l'avez terminée sur le lac Majeur au Tessin, vous savez qu'un voyage de trois heures en train en Suisse peut vous transporter dans un autre monde. Laissez-nous vous emmener aux quatre coins de ce pays diversifié et vous présenter les curiosités, les destinations et nos conseils pour Swiss Activities."
+      }
+    },
+    "s": {
+      "title": "Swiss Activities -Cherche et réserve ton activité",
+      "description": "Trouve l'activité qui te convient sur Swiss Activities et compare et choisis parmi plus de 400 activités de loisirs."
+    },
+    "about_us": {
+      "title": "À propos de nous",
+      "description": "Swiss Activities partage sa passion pour les voyages et les loisirs.",
+      "hero": {
+        "title": "Le temps est loisir",
+        "text": "Swiss Activities est une plateforme de réservation en ligne d'activités de loisirs en Suisse. Nous réunissons des centaines de prestataires de loisirs avec des hôtes suisses et étrangers. Chez Swiss Activities, vous pouvez réserver votre expérience directement et facilement en ligne."
+      },
+      "who": {
+        "title": "Qui nous sommes",
+        "text": "Nous sommes une équipe jeune et motivée, passionnée par les loisirs en Suisse. Nous aimons essayer nous-mêmes de nouvelles activités, les décrire, les recommander et les rendre réservables. Chez Swiss Activities, nous vous aidons à économiser beaucoup de temps et de nerfs lors de la recherche, de la comparaison et de la réservation de votre prochaine aventure."
+      },
+      "start": {
+        "title": "Notre départ",
+        "text": "La pandémie de Corona a sévèrement restreint les voyages en 2020. Les voyages à l'étranger en particulier ont été rendus plus difficiles. Pendant ce temps nous nous sommes rendus compte qu'il n'existe pas de plateforme nationale de réservation d'activités de loisirs pour faciliter les déplacements en Suisse. C'est pourquoi nous avons créé Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Mars 2020",
+            "title": "Bootstrapping Swiss Activities comme modèle économique"
+          },
+          "march_2021": {
+            "date": "Mars 2021",
+            "title": "Formation de l'entreprise"
+          },
+          "june_2021": {
+            "date": "Juin 2021",
+            "title": "Lancement de sa propre plateforme"
+          },
+          "september_2021": {
+            "date": "September 2021",
+            "title": "500 activités réservables en direct activées"
+          },
+          "december_2021": {
+            "date": "Décembre 2021",
+            "title": "Pre-seed funding round completed"
+          },
+          "march_2022": {
+            "date": "Mars 2021",
+            "title": "Lancement du programme d'affiliation"
+          },
+          "may_2022": {
+            "date": "May 2021",
+            "title": "Lancement du programme de partenariat B2B"
+          }
+        }
+      },
+      "partner": {
+        "title": "La Mission Activités Suisses pour nos partenaires",
+        "text": "Notre mission est de permettre aux prestataires de loisirs de toute la Suisse d'avoir une présence en ligne simple et économique. Nous soutenons nos partenaires dans le marketing, les ventes et le service client et améliorons les processus internes. Nous ne pensons pas que Swiss Activities en tant que plateforme unique puisse répondre aux besoins de tous les utilisateurs. C'est pourquoi nous mettons consciemment en œuvre une approche ouverte et collaborons avec des partenaires commerciaux et des blogueurs nationaux et étrangers pour atteindre l'optimum de la portée client."
+      },
+      "kunden": {
+        "title": "La Mission Activités Suisses pour nos clients",
+        "text": "Nous couvrons les prestataires de loisirs dans toute la Suisse : des indépendants aux destinations organisées par des professionnels, du lac de Constance au lac Léman et des villes animées aux étroites vallées montagneuses des Alpes suisses. Ainsi, vous pouvez facilement réserver votre prochaine aventure. Peu importe où vous êtes et ce que vous avez envie de faire."
+      },
+      "promise": {
+        "title": "Notre promesse",
+        "list": [
+          "pas d'appels téléphoniques chronophages pour des éclaircissements",
+          "pas de recherches interminables sur d'innombrables sites Web",
+          "disponibilités directement vérifiables",
+          "réservations immédiates sans détour",
+          "pas de frais cachés",
+          "options de paiement simples et rapides",
+          "pas de files d'attente fastidieuses",
+          "Aperçu des remises intéressantes",
+          "offres locales"
+        ]
+      },
+      "team": {
+        "title": "L'équipe"
+      }
+    },
+    "tos_b2b": {
+      "title": "Conditions générales d'affaires (B2B)",
+      "description": "B2B T&C - Trouve des activités de loisirs adaptées dans les domaines des destinations d'excursion, des activités de plein air et d'intérieur, de la nourriture et des boissons et des offres de sigthseeing."
+    },
+    "tos_b2c": {
+      "title": "Conditions générales d'affaires",
+      "description": "B2C T&C - Trouve des activités de loisirs adaptées dans les domaines des destinations d'excursion, des activités de plein air et d'intérieur, de la nourriture et des boissons et des offres de sigthseeing."
+    },
+    "tos_aff": {
+      "title": "Programme d'affiliation",
+      "description": "Programme d'affiliation - Trouve des activités de loisirs adaptées dans les domaines des destinations d'excursion, des activités de plein air et d'intérieur, de la nourriture et des boissons et des offres de sigthseeing."
+    },
+    "imprint": {
+      "title": "Impressum",
+      "description": "Impressum - Trouve des activités de loisirs adaptées dans les domaines des destinations d'excursion, des activités de plein air et d'intérieur, de la nourriture et des boissons et des offres de sigthseeing."
+    },
+    "privacy_policy": {
+      "title": "Politique de confidentialité",
+      "description": "Politique de confidentialité - Trouve des activités de loisirs adaptées dans les domaines des destinations d'excursion, des activités de plein air et d'intérieur, de la nourriture et des boissons et des offres de sigthseeing."
+    },
+    "contact_us": {
+      "title": "Contactez nous - Swiss Activiites",
+      "description": "Si tu as des questions, nous serons heureux de t'aider."
+    },
+    "basket": {
+      "title": "Chariot - Swiss Activiites",
+      "delete": "Éteindre",
+      "edit": "Éditer",
+      "cancel": "Avorter",
+      "update": "Mise à jour panier",
+      "next": "À consulter",
+      "empty": "Votre panier est vide",
+      "hold": "Nous maintenons cette réserve pour",
+      "explore": "Découvrir les loisirs"
+    },
+    "booking": {
+      "title": "Reservation",
+      "delete": "Supprimer",
+      "edit": "Éditer",
+      "cancel": "Annuler",
+      "update": "Mise à jour panier",
+      "next": "À consulter",
+      "empty": "Votre panier est vide",
+      "hold": "Nous maintiendrons cette réservation pendant"
+    },
+    "confirmation": {
+      "title": "Confirmation de réservation"
+    },
+    "activities": {
+      "title": "Activités de loisirs Suisse 2022",
+      "description": "Trouvez votre activité de loisirs idéale en 2022 et réservez des offres dans les catégories Excursions, Activités de plein air, Activités d'intérieur, Alimentation et boissons et Visites guidées.",
+      "intro": "En Suisse, vous trouverez de nombreuses possibilités de loisirs en toutes saisons. La diversité des paysages, avec 8 800 pics montagneux, 1 400 glaciers et 1 500 lacs et rivières, permet un large éventail d'activités de plein air. Le réseau de transport est bien développé, de sorte que vous pouvez atteindre facilement tous les lieux d'excursion et les activités touristiques par les transports publics. Cependant, les activités d'intérieur et celles qui tournent autour de la nourriture et de la boisson sont également bien pourvues",
+      "titleParentLocation": "Les meilleures choses à faire dans la {{locationTitle}} 2022",
+      "descriptionParentLocation": "Trouvez et réservez les meilleures activités de loisirs dans {{locationTitle}}. Pas de frais de réservation et options d'annulation gratuites.",
+      "titleChildLocation": "Les meilleures choses à faire à {{locationTitle}} 2022",
+      "descriptionChildLocation": "Trouvez et réservez les meilleures activités de loisirs dans {{locationTitle}}. Pas de frais de réservation et options d'annulation gratuites.",
+      "titleParentType": "Les meilleurs {{typeTitle}} 2022",
+      "descriptionParentType": "Trouvez, comparez et réservez les meilleurs {{typeTitle}} de toute la Suisse. Pas de frais de réservation et options d'annulation gratuites.",
+      "titleChildType": "Les meilleurs offres de {{typeTitle}} 2022",
+      "descriptionChildType": "Trouvez, comparez et réservez les meilleures offres pour {{typeTitle}} de toute la Suisse. Pas de frais de réservation et options d'annulation gratuites.",
+      "titleParentLocationParentType": "Les meilleurs {{typeTitle}} dans la {{locationTitle}} 2022",
+      "descriptionParentLocationParentType": "Comparez et réservez les meilleurs {{typeTitle}} à {{locationTitle}} 2022, sans frais de réservation et avec des options d'annulation gratuites.",
+      "titleParentLocationChildType": "Les meilleurs {{typeTitle}} dans la {{locationTitle}} 2022",
+      "descriptionParentLocationChildType": "Comparez et réservez les meilleures offres pour {{typeTitre}} à {{locationTitle}} 2022. Pas de frais de réservation et des options d'annulation gratuites.",
+      "titleChildLocationParentType": "Les meilleurs offres de {{typeTitle}} à {{locationTitle}} 2022",
+      "descriptionChildLocationParentType": "Comparez et réservez les meilleurs {{typeTitre}} à {{locationTitle}} 2022, sans frais de réservation et avec des options d'annulation gratuites",
+      "titleChildLocationChildType": "Les meilleurs offres de {{typeTitle}} à {{locationTitle}}} 2022",
+      "descriptionChildLocationChildType": "Comparez et réservez les meilleures offres pour {{typeTitle}} à {{locationTitle}} 2022. Pas de frais de réservation et des options d'annulation gratuites."
+    },
+    "listing": {
+      "title": "{{listingTitle}}",
+      "offersTitle": "{{title}} Activités",
+      "topActivities": "Top Activités",
+      "viewAll": "Voir tout",
+      "viewAllActivities": "Voir toutes les activités",
+      "article": "Article",
+      "activities": "Activités",
+      "related": "Autres articles",
+      "payment": "Méthodes de paiement",
+      "mainTitle": "Les offres en un coup d'œil",
+      "description": "{{listingTitle}}",
+      "tableOfContent": "Table des matières",
+      "allOffers": "Toutes les offres",
+      "home": "Home",
+      "offers": "Offres",
+      "metaTitle": "Les meilleures offres de {{listingSlug}} 2022",
+      "metaDescription": "Réservez les meilleures offres de {{listingSlug}}  et réserver sans frais supplémentaires et en direct. ",
+      "booknow": "Réservez maintenant pour {{date}}",
+      "overview": "Aperçu",
+      "toursTickets": "Visites et billets",
+      "more": "En savoir plus sur {{val}}"
+    },
+    "error": {
+      "title": "Nous sommes désolés, mais une erreur s'est produite. Revenez à la page principale et recherchez votre activité de loisirs appropriée.",
+      "button": "Aller à la page d'accueil"
+    },
+    "supplier": {
+      "title": "Swiss Activities: le plus grand marché des activités de loisirs en Suisse",
+      "description": "Les Swiss Activtities sont les plus grandes activités de loisirs en Suisse. Avec nous, vous pouvez atteindre plus de clients et augmenter vos réservations.",
+      "hero": {
+        "title": "Le plus grand marché pour les activités de loisirs en Suisse",
+        "description": "Pourquoi participer à des Swiss Activtities",
+        "button": "Adhérer maintenant"
+      },
+      "numbers": {
+        "title": "Ce que les Swiss Activtities ont fait pour ses prestataires de services depuis la fondation en 2021",
+        "blocks": [
+          {
+            "title": "Visites des clients",
+            "number": "250 000",
+            "text": "Visiteurs du site Web"
+          },
+          {
+            "title": "Réservations clients",
+            "number": "> 10 000",
+            "text": "Les invités ont transporté"
+          },
+          {
+            "title": "Service client",
+            "number": "> 1 000",
+            "text": "Pourparlers menés"
+          },
+          {
+            "title": "Automatisation",
+            "number": "dix",
+            "text": "Systèmes de réservation"
+          }
+        ]
+      },
+      "why": {
+        "title": "Pourquoi participer à des Swiss Activtities",
+        "sales": {
+          "title": "Augmenter les ventes",
+          "description": "Utilisez votre logiciel de réservation existant et bénéficiez d'un marketing expert pour une meilleure gamme."
+        },
+        "support": {
+          "title": "Service client",
+          "description": "Le support client engagé et les directives transparentes se concentrent sur le marché suisse."
+        },
+        "finances": {
+          "title": "Finance simple",
+          "description": "Paiements hebdomadaires / mensuels et une équipe d'experts pour lutter contre la fraude dans les paiements en ligne."
+        },
+        "local": {
+          "title": "Experts de voyage locaux",
+          "description": "Les Swiss Activtities ont été fondées par des experts locaux de voyage et de tourisme. Nous connaissons les besoins de nos partenaires."
+        }
+      },
+      "who": {
+        "title": "Qui travaille avec des Swiss Activtities",
+        "partners": [
+          {
+            "title": "Chemins de fer de montagne",
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png"
+            ]
+          },
+          {
+            "title": "Destinations",
+            "blocks": [
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png"
+            ]
+          },
+          {
+            "title": "Attractions",
+            "blocks": [
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png"
+            ]
+          },
+          {
+            "title": "Voyagistes",
+            "blocks": [
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "help": {
+        "title": "Comment nous soutenons les affaires quotidiennes",
+        "blocks": [
+          {
+            "title": "Augmenter les ventes",
+            "blocks": [
+              {
+                "title": "Atteindre plus de clients suisses",
+                "text": "Énumérez vos visites et produits sur la principale plate-forme suisse pour les activités de loisirs et gagnez de nouveaux invités suisses."
+              },
+              {
+                "title": "Expert en marketing et promotion",
+                "text": "Les Swiss Activtities sont dans le même bateau que vous. Depuis que nous réalisons les ventes lorsqu'un produit a été acheté et réalisé, nous poursuivons les mêmes objectifs."
+              },
+              {
+                "title": "Démarrer les ventes à la poussée d'un bouton",
+                "text": "Les Swiss Activtities sont connectées aux principaux systèmes de réservation et offrent un échange entièrement automatique de la création de la liste à la réservation dans le système de réservation."
+              }
+            ]
+          },
+          {
+            "title": "Service client",
+            "blocks": [
+              {
+                "title": "Support client expérimenté",
+                "text": "Nous prenons soin des questions des clients et de la réservation pendant que vous pouvez vous concentrer sur une expérience inoubliable pour les clients."
+              },
+              {
+                "title": "Annulations simples",
+                "text": "Vous pouvez annuler la réservation dans les 24 heures suivant la réservation."
+              },
+              {
+                "title": "Informations client",
+                "text": "Comme d'habitude avec d'autres marchés, nous partageons toutes les informations des clients dès le début. Un échange précoce permet UppSeling ou des ventes supplémentaires."
+              }
+            ]
+          },
+          {
+            "title": "Minimiser les risques",
+            "blocks": [
+              {
+                "title": "Paiements en ligne faciles",
+                "text": "Nous acceptons les paiements des clients pour simplifier votre comptabilité. Vous obtenez les paiements chaque semaine / mensuels après la tournée."
+              },
+              {
+                "title": "Annulations et remboursements",
+                "text": "Toutes les annulations et remboursements sont gratuits."
+              },
+              {
+                "title": "Inversures",
+                "text": "Si un client a déclenché un débit de retour, nous reprendrons la communication avec la banque. Il n'y a pas de coûts supplémentaires."
+              }
+            ]
+          },
+          {
+            "title": "Expert de l'industrie suisse",
+            "blocks": [
+              {
+                "title": "Fondée par des experts industriels",
+                "text": "Travaillez avec une équipe expérimentée en mettant l'accent sur le tourisme suisse. Nous vous soutenons à chaque étape pour nous assurer que votre produit sera réservé en ligne."
+              },
+              {
+                "title": "Nos partenaires importants",
+                "text": "Nous avons travaillé avec de nombreux voyagistes suisses dans le passé et comprenons leurs problèmes. Notre mission est de construire un marché utilisé par les opérateurs et leurs clients."
+              }
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Structure des prix",
+        "subtitle": "9% (excl. TVA) + 0,30 CHF par transaction",
+        "description": "Activation gratuite, pas de coûts fixes mensuels ou de frais cachés. Vous ne payez que pour un invité négocié. Les annulations et les rejets sont également gratuits",
+        "blocks": [
+          {
+            "pretitle": "Prêt à partir",
+            "cost": "CHF 0",
+            "subcost": "Pas de coûts fixes",
+            "button": "enregistrer",
+            "subbutton": "Ouvrez les nouveaux canaux de vente",
+            "includes": [
+              "Soutien des clients",
+              "Écrire les produits",
+              "Avantages Visibilité en ligne"
+            ],
+            "faq": [
+              {
+                "title": "Marketing gratuit",
+                "text": "Votre inscription est gratuite et il n'y a pas de coûts fixes. Vous pouvez créer autant d'activités que vous le souhaitez. Nous commercialisons votre offre et vous aidons à ouvrir de nouveaux groupes cibles et à faire connaître votre activité."
+              },
+              {
+                "title": "Payer au fur et à mesure",
+                "text": "Ne payez que pour une médiation réussie. Le coût d'une réservation médiée n'est que de 9% + 0,30 CHF excl. TVA."
+              },
+              {
+                "title": "Création de contenu",
+                "text": "Les Swiss Activtities complètent votre offre pour répondre aux questions ouvertes possibles de vos invités. Nous énumérons votre offre multilingue et prenons le contrôle de l'optimisation du référencement pour obtenir plus de plage. Souhaitez-vous avoir le texte de votre offre écrite par nous à partir de zéro? Parlez à notre équipe de vente des possibilités."
+              }
+            ]
+          },
+          {
+            "pretitle": "Site Web de site Web",
+            "cost": "CHF 2 000",
+            "subcost": "Unique",
+            "button": "Accepter",
+            "subbutton": "Optimisez votre apparence numérique",
+            "includes": [
+              "Topplating de l'offre dans les Swiss Activtities",
+              "Mentionne la newsletter",
+              "Soutien des clients",
+              "Écrire les produits",
+              "Avantages Visibilité en ligne"
+            ],
+            "faq": [
+              {
+                "title": "Nouveau site Web",
+                "text": "Nous créerons votre nouveau site Web avec 10 à 12 nouveaux sites Web et vous aiderons à créer le contenu. Si vous le souhaitez, le contenu complet peut être écrit (coûts supplémentaires)."
+              },
+              {
+                "title": "Système de réservation",
+                "text": "Nous vous aiderons à choisir le bon système de réservation et son installation."
+              },
+              {
+                "title": "Optimisations SEO",
+                "text": "Nous vous aidons à être trouvé sur Google."
+              }
+            ]
+          }
+        ]
+      },
+      "tech": {
+        "title": "Partenaire technologique",
+        "description": "Intégration avec tous les principaux systèmes de réservation. Ne trouvez-vous pas votre système de réservation? Obtenez-le en contact avec nous."
+      },
+      "faq": [
+        {
+          "title": "Coûts et traitement",
+          "blocks": [
+            {
+              "title": "Combien cela me coûte-t-il de m'inscrire aux Swiss Activtities et à la commission d'une médiation?",
+              "text": "L'inscription est gratuite et il n'y a pas de coûts fixes pour activer les activités. Le coût d'une réservation est de 9% + 0,30 CHF excl. TVA. Si vous utilisez un logiciel de réservation, vous devez généralement payer des frais là-bas. Veuillez contacter votre conseiller client pour le système de réservation ou le gestionnaire de canaux."
+            },
+            {
+              "title": "Comment et quand puis-je obtenir l'argent après avoir réussi à placer un client?",
+              "text": "L'argent est transféré sur votre compte bancaire chaque semaine après avoir joué."
+            },
+            {
+              "title": "Quelle est la sécurité de la plate-forme d'Swiss Activtities?",
+              "text": "Les Swiss Activtities utilisent la norme PCI la plus élevée pour traiter les transactions de cartes de crédit. Payyo est utilisé pour gérer les transactions, ce qui fonctionne à son tour avec Six / WorldPay."
+            }
+          ]
+        },
+        {
+          "title": "Processus de caisse et de réservation",
+          "blocks": [
+            {
+              "title": "Puis-je supprimer mon entrée à tout moment?",
+              "text": "Oui, vous pouvez vous retirer du contrat à tout moment. Il n'y a pas de durée minimale du contrat et il n'y a pas de frais de la résiliation."
+            },
+            {
+              "title": "Comment fonctionne le processus de réservation?",
+              "list": [
+                "Le client sélectionne une activité de loisir.",
+                "Le client est entré dans le nom de son groupe.",
+                "Le client a saisi des informations supplémentaires telles que les allergies, le numéro de téléphone, etc. et ses données de carte de crédit. Nous utilisons les normes de sécurité PCI les plus élevées pour transmettre des transactions de cartes de crédit.",
+                "Le client reçoit son billet par e-mail. Vous recevrez également une confirmation de réservation."
+              ]
+            },
+            {
+              "title": "Puis-je activer plusieurs activités de loisirs?",
+              "text": "Oui, vous pouvez activer n'importe quel nombre d'activités de loisirs. Cependant, veuillez enregistrer uniquement autant d'offres que vous pouvez le servir."
+            },
+            {
+              "title": "Quelles activités conviennent à l'activation dans les Swiss Activtities?",
+              "text": "Les Swiss Activtities sont une plate-forme pour toutes les activités de loisirs. Les activités avec des heures de début fixe (visites guidées, des événements spéciaux), mais aussi des activités qui peuvent être réservées, quel que soit un certain temps (par exemple, les billets de jour, les intrants quotidiens, etc.) peuvent être activés."
+            },
+            {
+              "title": "Quelles activités ne puis-je pas allumer pour le moment?",
+              "text": "Malheureusement, les locations et les bons ne sont actuellement pas encore possibles. Nous travaillons à élargir constamment notre offre avec de nouvelles fonctionnalités. Nous sommes heureux de vous tenir au courant des ajustements."
+            },
+            {
+              "title": "Puis-je intégrer mon logiciel de réservation existant avec des Swiss Activtities?",
+              "text": "Oui, nous travaillons avec Experience Bank, qui nous indique la disponibilité via une interface. Nous sommes actuellement intégrés: Trekksoft, Waldhart, Zaui, Smeetz.com, pendentif ou en planification :, Tomas, Farharbor, Rezdy, N-Tree, s'il n'y a pas de lien avec Bank Experience, vous êtes les bienvenus à Tanja @ SwissActivités. Report pour discuter d'une nouvelle interface possible."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: le plus grand marché des activités de loisirs en Suisse",
+      "description": "Les Swiss Activtities sont les plus grandes activités de loisirs en Suisse. Avec nous, vous pouvez atteindre plus de clients et augmenter vos réservations.",
+      "hero": {
+        "title": "Faire partie des Swiss Activtities",
+        "description": "Inscrivez-vous gratuitement dans les Swiss Activtities et augmentez votre portée avec les clients suisses et internationaux. Vos avantages lors d'un aperçu",
+        "list": [
+          "Être trouvé sur Google en tant qu'entreprise et avec vos offres. Et cela en 4 langues!",
+          "Ouvrez un nouveau canal de vente",
+          "Bénéficier de notre support client gratuit",
+          "Connectez votre système de réservation et gérez vos réservations directement.",
+          "Une nouvelle réservation - votre client. Nous ne cachons pas nos partenaires et voulons offrir au client la meilleure expérience de réservation.",
+          "Coûts faibles: 9% de commission + 0,30 CHF coûte à un nouveau client. Pas de coûts fixes ou de frais cachés.",
+          "Vos clients peuvent payer dans toutes les méthodes de paiement locales telles que TWINT, acheter sur le compte et les cartes de crédit communes."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affilier",
+      "description": "Participez en tant que partenaire dans les Swiss Activtities et gagnez des frais fixes de 3% de la première réservation. Il n'y a pas de coûts fixes.",
+      "hero": {
+        "title": "Gagnez des commissions et soutenez le tourisme suisse",
+        "description": "Connectez-vous aux fournisseurs locaux de votre région ou de toute la Suisse et gagnez 3% par réservation. Les hôtels et les appartements peuvent montrer gratuitement votre présence pour les Swiss Activtities.",
+        "steps": [
+          "Connexion",
+          "Créez votre marché ou votre widget",
+          "Gagner de l'argent!"
+        ]
+      },
+      "flat": {
+        "title": "Hôtel et appartements visibles",
+        "text": "Communiquez gratuitement votre hôtel ou votre appartement sur des Swiss Activtities et réseauter avec des fournisseurs d'exploitation touristique locaux pour gagner des commissions. Vous pouvez également créer votre propre marché pour les activités en quelques minutes."
+      },
+      "blog": {
+        "title": "Partenaire pour votre blog",
+        "text": "Trouvez les bonnes offres pour rendre votre blog encore plus convivial. Connectez les activités dans votre blog et gagnez une commission de 3% par réservation médiée."
+      },
+      "hyperlinks": {
+        "title": "Utilisez des hyperliens ou créez votre propre marché",
+        "blocks": [
+          {
+            "title": "Lien d'affiliation",
+            "text": "Créez votre propre profil et sélectionnez les bonnes offres. Idéalement, vous ajoutez votre lien d'affiliation directement dans votre texte. Cette configuration ne prend que quelques minutes et vous avez déjà les options pour générer vos premiers francs."
+          },
+          {
+            "title": "Marché",
+            "text": "Avez-vous beaucoup de trafic sur votre site Web? Ou vous avez une utilisation élevée à l'interrupteur / réception parce que les clients se renseignent sur les informations sur les activités dans la région? Créez votre propre marché pour présenter certaines offres et présenter votre propre portefeuille à vos clients."
+          }
+        ]
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "News, Pressemitteilungen und mehr."
+    }
+  },
+  "header": {
+    "navigation": "Navigation"
+  },
+  "alt": {
+    "logo": "Logo"
+  },
+  "algolia": {
+    "type": "Type",
+    "location": "Emplacement"
+  },
+  "placeholder": {
+    "search": "Chercher",
+    "select": "Sélect...",
+    "destination": "Entrez une destination",
+    "activity": "Entrez une activité",
+    "tour": "Entrer en tournée",
+    "headerSearch": "Rechercher 'Rigi' ou 'Paragliding'"
+  },
+  "filter": {
+    "filter": "Filtre",
+    "apply": "Appliquer",
+    "filters": "Filters",
+    "clear": "Clear",
+    "searchview": "Recherche vue",
+    "search": "Chercher",
+    "location": "Emplacements",
+    "back": "Retourner",
+    "type": "Type",
+    "pricerange": "Échelle des prix",
+    "activity": "Activité",
+    "activities": "Activités",
+    "relatedplaces": "Lieux associés",
+    "relatedactivities": "Activités connexes",
+    "pickDate": "Choisir la date",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "allDates": "Toutes les dates",
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "viewCalendar": "Afficher le calendrier",
+    "filterBy": "Filtrer par",
+    "mapView": "Vue cartographique",
+    "viewAll": "Voir tout",
+    "hide": "Se cacher",
+    "price": "Prix",
+    "noResults": "Aucun résultat",
+    "age": "Âge",
+    "topic": "Sujet",
+    "season": "Saison",
+    "lang": "Langues",
+    "suitableFor": {
+      "title": "Convient à",
+      "crowds": "Bon pour éviter les foules",
+      "safety": "Prendre des mesures de sécurité",
+      "excellence": "Badge d'excellence",
+      "forKid": "Accueille les enfants",
+      "virtual": "Expérience virtuelle"
+    },
+    "sort": {
+      "index": "Sort",
+      "relevance": "Relevance",
+      "popularityDesc": "Popularity desc.",
+      "ratingDesc": "Rating desc.",
+      "priceDesc": "Price desc.",
+      "priceAsc": "Price asc."
+    }
+  },
+  "search": {
+    "pageNum": "Site {{num}}",
+    "searchActivity": "Parapente, Interlaken...",
+    "location": {
+      "subtitle": "{{title}} est dans {{parentTitle}}. Il existe plus de {{length}} offres pour passer votre temps libre.",
+      "types": "Les meilleures activités de loisirs à {{title}} sont"
+    },
+    "type": {
+      "subtitle": "{{title}} est un {{parentTitle}} populaire en Suisse.",
+      "info": "Sur Swiss Activities, vous pouvez trouver des offres via {{length}} {{title}} que vous pouvez réserver directement."
+    },
+    "locationWithType": {
+      "typeNote": {
+        "parent": "Dans {{location_link}}, la catégorie {{type_link}} est très populaire.",
+        "child": "Dans {{location_link}} la catégorie {{type_link}} est très populaire."
+      },
+      "activitiesNote": {
+        "parent": "Sur Swiss Activities, vous pouvez actuellement trouver {{location}} {{num_activities}}. Offres pour {{type}} à réserver directement.",
+        "child": "Sur les activités suisses que vous pouvez actuellement réserver dans {{location}} {{num_activities}}. Offres pour le livre {{type}} directement."
+      },
+      "relatedTypesNote": {
+        "parent": "Pour des activités plus populaires dans {{location}}, voir {{type1_link}}, {{type2_link}} et {{type3_link}}.",
+        "child": "Pour des activités plus populaires dans {{location}}, voir {{type1_link}}, {{type2_link}} et {{type3_link}}."
+      }
+    },
+    "navigationBreadcrumbs": {
+      "root": "la Suisse"
+    },
+    "thereare": "Il y a",
+    "andmanymore": " et bien d'autres.",
+    "support": "",
+    "all": "Tout",
+    "mobileMapView": "Appuyez pour accéder à la vue Carte",
+    "noActivities": "Il n'y a pas d'activités.",
+    "filter": "Filter",
+    "sort": "Sort",
+    "map": "Map",
+    "searchDesc": "Destination/property name",
+    "dateInputTitle": "Check-out date",
+    "offers": "{{number}} Offres",
+    "card": {
+      "from": "De",
+      "person": "Par Personne"
+    },
+    "viewMore": "Voir plus",
+    "list": "Liste",
+    "searchHere": "Rechercher dans ce domaine",
+    "listing": "Destinations / Guides"
+  },
+  "category": {
+    "title": "Activités et lieux",
+    "location": "Emplacement",
+    "type": "Taper",
+    "location+type": "Emplacement + Type"
+  },
+  "activity": {
+    "recommendation": "Recommandations",
+    "title": "Offres réservables",
+    "offer": "cette offre",
+    "uspTitle": "à propos {{title}}",
+    "uspBookForNext": "jeudi prochain {{date}}",
+    "reviews": "commentaires",
+    "readmore": "en savoir plus",
+    "from": "de",
+    "booknow": "Réservez maintenant",
+    "searchresults": "Résultats de recherche",
+    "allActivities": "Toutes activités",
+    "providedBy": "Offert par",
+    "save": "Sauvegarder",
+    "removeFromSaved": "Remove",
+    "share": "Partager",
+    "selectDate": "Sélectionner la date",
+    "checkAvailability": "Vérifier la Disponibilité",
+    "highlights": "Points forts",
+    "details": "Détails",
+    "arrival": "Arrivée ",
+    "similarActivities": "Activités similaires",
+    "openAttraction": "Cette attraction est ouverte et accueille déjà des visiteurs.",
+    "map": {
+      "map": "Carte",
+      "road": "Route",
+      "myLocation": "Ma position",
+      "departure": "Point de départ",
+      "locationError": "Les sites suivants ont été bloqués pour le suivi de votre position sur cette page"
+    },
+    "advantage": {
+      "title": "Informations utiles",
+      "online": "Confirmation instantanée de la réservation",
+      "queue": "Pas de file d'attente à la caisse",
+      "covid-19": "COVID19 Concept de protection disponible",
+      "secure": "Les paiements sont sécurisés et cryptés"
+    },
+    "question": "Tu as des questions?",
+    "extras": "Extras",
+    "priceFrom": "Prix à partir de",
+    "available": "Disponible",
+    "rating": "avis",
+    "PrivatTour": "Visite privée",
+    "widget": {
+      "title": "Offres",
+      "titleDate": "Sélectionne une date",
+      "titleTime": "Sélectionne une heure",
+      "titleParticipants": "Choose participants",
+      "titleBasket": "Your order",
+      "from": "Price from",
+      "titleTickets": "Choisis les billets",
+      "offers": "Offres",
+      "alldayTicket": "",
+      "navDate": "Date",
+      "calendarTitle": "Sélectionner une date",
+      "time": "Heure",
+      "navTicket": "3. Billets",
+      "mobileWidgetOffersTitle": "Choisir une offre:",
+      "check": "Vérifie la disponibilité",
+      "addToCart": "Ajouter au panier",
+      "back": "Retour",
+      "notBookable": "Malheureusement, cette offre n'est pas réservable pour le moment.",
+      "notBookableSeats": "Pas assez de places disponibles. Veuillez sélectionner une autre date.",
+      "help": "Peut-on quand même t'aider ? Écris-nous un courriel",
+      "helpLink": "ici.",
+      "discover": "Découvre d'autres activités",
+      "paymentMethods": "Modes de paiement",
+      "payWith": "Payer avec",
+      "redbox": "Pas de disponibilités",
+      "priceFree": "free",
+      "greenbox": "places disponibles",
+      "total": "Total",
+      "totalPrice": "Total",
+      "priceTaxes": "Pas de frais supplémentaires",
+      "offersHelper": "Choisis l'heure et ton billet",
+      "offerSelect": "Choisir",
+      "reserve": "Reserve Now & Pay Later",
+      "reserveHint": "<b>TIPP:</b> Réservez en ligne et payez plus tard avec un bulletin de versement.",
+      "learnMore": "En savoir plus",
+      "done": "Choisir",
+      "offerTimeSelect": "Sélectionner l'heure",
+      "reservePopup": {
+        "title": "Réservez maintenant et payez plus tard",
+        "description": "Réservez votre billet, votre activité ou votre excursion en ligne et payez l'excursion en toute simplicité au moyen d'un bulletin de versement. Vous devez être un résident de la Suisse. Swissbilling effectue la transaction et vous envoie une facture après la réservation.",
+        "listTitle": "Comment réserver maintenant et payer plus tard",
+        "listOffer": "Choisissez votre offre",
+        "listComplete": "Complétez votre réservation à la caisse",
+        "listInformation": "Entrez vos informations. Swissbilling vérifie si la transaction est effectuée.",
+        "listConfirmation": "Confirmation"
+      },
+      "basket": "Panier d'achat",
+      "basketAdd": "Ajouter au panier",
+      "selectedOffer": "Offre",
+      "selectedTickets": "Billets sélectionnés",
+      "tickets": "Sélectionner les billets",
+      "help": "Vous avez des questions sur l'offre ? Demandez-nous.",
+      "offerHelp": "Vous avez des questions ? Chattez avec nous.",
+      "overview": "Aperçu",
+      "adjust": "Modifier la réservation"
+    },
+    "tabs": {
+      "highlights": "Points forts",
+      "includes": "Comprend",
+      "offered": "Offerte",
+      "importantInformation": "Une information important",
+      "meetingPoints": "Points de rendez-vous",
+      "contentBlocks": "Blocs de contenu"
+    },
+    "newsletter": {
+      "title": "Inscrivez-vous à notre newsletter !",
+      "description": "Inscrivez-vous maintenant pour recevoir des conseils de voyage, des idées d'inspiration et les derniers guides de voyage directement dans votre boîte aux lettres.",
+      "hint": "En vous inscrivant, vous acceptez de recevoir des courriels promotionnels. Vous pouvez vous désinscrire à tout moment.",
+      "signup": "Sign up",
+      "inputPlaceholder": "Votre email"
+    },
+    "notRefundable": {
+      "title": "Non annulable",
+      "description": "Malheureusement, nous ne pouvons pas vous offrir de remboursement ni modifier ou annuler votre réservation pour ce produit particulier en raison de la politique de nos partenaires"
+    }
+  },
+  "listing": {
+    "title": "Guide de voyage"
+  },
+  "UI": {
+    "destination": "Destination",
+    "activity": "Activité",
+    "date": "Date"
+  },
+  "home": {
+    "title": "Trouve, compare et réserve",
+    "why": "Why book with us",
+    "subTitle": "Réserve ton activité de loisirs en ligne ! Il y a des activités aériennes, aquatiques, de montagne et de ville à découvrir.",
+    "newSubTitle": "Pourquoi recherchez-vous si longtemps sur Google pour trouver la bonne activité pour votre famille, vos amis ou vous-même? Économisez votre temps et passez-le pour plus de temps libre!",
+    "reviewTitle": "Ce que disent les clients de Swiss Activities:"
+  },
+  "promises": {
+    "title": "Nos 4 promesses",
+    "step1": "Options d'annulation gratuites",
+    "step2": "Modes de paiement locaux",
+    "step3": "Assistance client Worldcalsse",
+    "step4": "Pas de frais cachés"
+  },
+  "freeCancel": {
+    "title": "Annulation gratuite",
+    "description": "Ne stresse pas si tes plans changent. Annule jusqu'à 24 heures avant le début de ton activité pour un remboursement complet."
+  },
+  "fasterAccess": {
+    "title": "Accès plus rapide",
+    "description": "Évite les longues files d'attente pour les billets et va directement aux bonnes choses dans les endroits que tout le monde veut visiter."
+  },
+  "friendlyHelp": {
+    "title": "aide sympathique",
+    "description": "We're standing by 24/7 to make your experience incredible. Reach us by phone, email, or WhatsApp."
+  },
+  "discover": {
+    "title": "Découvre des activités"
+  },
+  "topActivities": {
+    "title": "Nos meilleures activités"
+  },
+  "popularActivities": {
+    "title": "Activités populaires"
+  },
+  "booking": {
+    "cancelable": "Annulation gratuite jusqu'au",
+    "privacyMessage": "En cliquant sur réservez maintenant, tu acceptes nos termes et conditions",
+    "privacyPolicy": "Conditions générales d'affaires.",
+    "phoneTooltip": "Nous utilisons le numéro de téléphone uniquement pour te contacter et jamais pour des raisons publicitaires",
+    "checkoutHeader": "Poursuivons avec le paiement plus sécurisé",
+    "paymentFailed": "La vérification du paiement a échoué, tu peux réessayer",
+    "personalTitle": "Détails personnels",
+    "personalSubtitle": "Informations nécessaires pour confirmer cette activité ou cette excursion",
+    "mainGuest": "Livreur principal",
+    "fullName": "Prénom*",
+    "lastName": "Nom de famille*",
+    "email": "Email*",
+    "phoneNumber": "Téléphone*",
+    "country": "Pays",
+    "countryChoose": "Choisis ton pays",
+    "cardDetails": "Sélectionnez un moyen de paiement",
+    "paymentSecure": "Les paiements sont sécurisés et cryptés",
+    "creditPayments": "Carte de crédit",
+    "cardNumber": "Numéro de carte",
+    "expDate": "Expiry Date",
+    "cvv": "CVV",
+    "cardHolder": "titulaire de la carte",
+    "date": "Date",
+    "time": "Heure",
+    "ticket": "Ticket",
+    "region": "Région",
+    "category": "Catégorie",
+    "total": "Total",
+    "faq": "Questions fréquentes",
+    "fullDay": "Journée entière",
+    "ticketOccupancy": "(jusqu'à {{occupancy}} pers.)",
+    "ticketMaxOccupancy": "(de {{occupancy}} pers.)",
+    "booknow": "Réservez maintenant",
+    "addDetails": "Add details",
+    "addMoreInformation": "Ajouter des détails",
+    "addPaymentMethod": "Choisir le mode de paiement",
+    "invoice": "Invoice",
+    "youBook": "Réservation confirmée - Panier d'achats",
+    "rebate": "Code de réduction"
+  },
+  "confirm": {
+    "title": "Merci beaucoup d'avoir réservé via Swiss Activities.",
+    "confirmed": "Réservation confirmée",
+    "wait": "Nous vérifions le statut du paiement",
+    "waitEmail": "Tu recevra un email une fois que le paiement a été confirmé",
+    "caption": "Merci beaucoup d'avoir réservé via swiss activities. Nous avons envoyé un e-mail de confirmation pour ta réservation en Suisse.",
+    "bookingNumber": "Numéro de réservation",
+    "point": "Point de rencontre",
+    "pointAddress": "Adresse du point de rencontre",
+    "number": "Numéro de téléphone mobile",
+    "end": "Fin"
+  },
+  "footer": {
+    "company": {
+      "title": "Entreprise",
+      "about-us": "A propos de nous",
+      "jobs": "Emplois",
+      "blog": "Blog",
+      "legal": "Mentions légales"
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "becomeapartner": "Devenir partenaire",
+      "affiliate": "Programme d'affiliation",
+      "login": "Connexion"
+    },
+    "contact": {
+      "title": "Contact",
+      "faq": "FAQ",
+      "contactus": "Contactez nous"
+    },
+    "socialMedia": "Des médias sociaux",
+    "language": "Language"
+  },
+  "contact_us": {
+    "name": "Nom complet",
+    "email": "Email address",
+    "message": "Votre message",
+    "send": "Envoie le message",
+    "where": "Où nous trouver",
+    "how": "Où nous contacter"
+  },
+  "blog": {
+    "title": "Guide de voyage des activités suisses",
+    "description": "En tant que pays relativement petit, la Suisse ne cesse de surprendre par sa remarquable diversité. Quatre langues officielles sont parlées sur à peine 40 000 kilomètres carrés et le climat varie entre le froid arctique en hiver et la chaleur méditerranéenne en été. Avec plus de 1 500 lacs, la Suisse est considérée comme le château d'eau de l'Europe et les Alpes représentent plus de 50 % de la masse terrestre. Si vous avez déjà commencé votre journée sur le Rhin à Bâle et l'avez terminée sur le lac Majeur au Tessin, vous savez qu'un voyage de trois heures en train en Suisse peut vous transporter dans un autre monde. Laissez-nous vous emmener aux quatre coins de ce pays diversifié et vous présenter les curiosités, les destinations et nos conseils pour Swiss Activities.",
+    "contactDescription": "",
+    "pointOfInterest": "Lieux d'intérêt",
+    "destinations": "Destinations et régions suisses",
+    "insiderBlog": "Swiss Activities - Conseils de voyage",
+    "travelTipp": "Travel Tipp Switzerland",
+    "pointOfInterestDescription": "Lorsque vous pensez à la Suisse, vous avez souvent en tête une image de montagnes enneigées, de lacs turquoise, de chocolat délicieux ou de fromage à l'odeur forte. En fait, il y a une quantité incroyable de choses à découvrir en Suisse. Que vous soyez à la recherche d'un château médiéval ou d'un glacier à couper le souffle, que vous souhaitiez vous promener dans un vignoble luxuriant ou dans les ruelles d'une vieille ville de rêve, ou que vous souhaitiez glisser sur un lac bleu turquoise à bord d'un vapeur à aubes historique ou sportivement dans votre propre kayak, la Suisse ne laisse rien à désirer. Les guides de voyage Swiss Activities vous rapprochent de tous les aspects de la Suisse - en commençant par l'époustouflant chemin de fer de la Jungfrau et en terminant par une visite du musée des transports à Lucerne.",
+    "destinationsDescription": "La Suisse se compose de 26 cantons et, grosso modo, de trois grandes régions géologiques : les Alpes, le Jura et le Plateau suisse. Les Alpes se composent de la région préalpine, de la région alpine et du versant sud des Alpes. Le pays est divisé en 13 régions touristiques, qui comprennent également la principauté voisine du Liechtenstein. Les guides de voyage de Swiss Activities sont situés dans ces régions pour vous rapprocher d'une destination. Qu'il s'agisse d'un sommet de montagne, d'une attraction, d'une ville ou d'une région entière. Vous y trouverez des contenus passionnants tels que les points forts, les activités possibles, la situation géographique, des informations importantes sur le voyage et le climat ainsi que nos meilleurs conseils sur les activités en Suisse.",
+    "insiderBlogDescription": "La diversité de la Suisse ne permet pas de s'orienter facilement dans la jungle des possibilités, des activités, des destinations d'excursion et des curiosités. C'est pourquoi Swiss Activities propose une série d'articles, de listes et de conseils d'initiés pour répondre à des questions spécifiques. Ils sont destinés à vous inspirer, à vous informer et à vous divertir. Vous trouverez ici des guides ultimes, des articles avec des listes thématiques ainsi que des informations générales sur toutes sortes de sujets concernant la Suisse.",
+    "travelTippDescription": "Travel Tipp Switzerland description",
+    "recentArticles": "Articles actuels",
+    "viewAll": "Voir tous",
+    "hide": "Cacher"
+  },
+  "attributes": {
+    "combiOffer": "Offre combinée",
+    "transport": "Transport",
+    "tickets": "Billet",
+    "rent": "Location",
+    "selfGuided": "Visite autoguidée",
+    "guidedPrivate": "Tour",
+    "guidedGroup": "Visite guidée de groupe",
+    "course": "Cours"
+  },
+  "tickets": {
+    "admission": "Admission",
+    "adults": "Adults",
+    "bike_rental": "Bike rental",
+    "families": "Family",
+    "groups": "Group",
+    "youth": "Youth",
+    "children": "Children",
+    "toddlers": "Toddler",
+    "private_group": "Private group",
+    "private_guide": "Private guide",
+    "seniors": "Senior",
+    "ski_rental": "Ski rental",
+    "students": "Student",
+    "ticket": "Ticket"
+  },
+  "supplier": {
+    "activities": "Activities",
+    "gallery": "Gallery",
+    "qualification": "Qualification",
+    "overview": "Overview",
+    "contact": "Contact us"
+  },
+  "staticUsps": {
+    "protection": "Annulation gratuite jusqu'à 24 heures avant l'arrivée..",
+    "fast": "Procurez-vous vos billets et payez le prix après votre voyage."
+  },
+  "contactPopup": {
+    "chat": "Chater avec nous",
+    "message": "Envoyer un message",
+    "title": "Vous avez des questions sur l'offre ?",
+    "subTitle": "Nous nous ferons un plaisir de répondre à vos questions.",
+    "modalTitle": "Comment pouvons-nous vous aider aujourd'hui ?"
+  },
+  "contactForm": {
+    "fullname": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "messagePlaceholder": "Demande, Réservation, etc...",
+    "submit": "Envoyer",
+    "formError": "Quelque chose n'a pas fonctionné. Essayez encore."
+  },
+  "contactThankYou": {
+    "title": "Merci de nous avoir contactés !",
+    "subTitle": "Nous vous répondrons dès que possible.",
+    "gotIt": "Next"
+  },
+  "internalLinkBlock": {
+    "destinations": "Destination de choix",
+    "locations": "13 régions de vacances en Suisse",
+    "topActivities": "Activités supérieures",
+    "topAttractions": "Principaux attraits"
+  },
+  "offerCard": {
+    "duration": "Durée",
+    "bookNow": "Réserver",
+    "booked": "Réservé à partir de plus de",
+    "people": "personnes",
+    "price": "Prix de",
+    "lessDetails": "Moins de détails",
+    "moreDetails": "Plus de détails",
+    "details": {
+      "about": "A propos de cette offre",
+      "included": "Ce qui est inclus",
+      "highlights": "Points forts",
+      "viewAll": "Voir tous",
+      "showLess": "Montrer moins"
+    }
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Votre sélectio",
+    "stepOneDescription": "Panier",
+    "stepTwo": "Your details",
+    "stepTwoDescription": "Vos détails",
+    "stepThree": "Dernière étape",
+    "stepThreeDescription": "Paiement"
+  },
+  "usps": {
+    "or": "ou",
+    "allDay": "Tous les jour",
+    "bookable": {
+      "title": "Réservable",
+      "description": "Pour {{val}}"
+    },
+    "online": {
+      "title": "Réservez votre billet en ligne"
+    },
+    "payment": {
+      "title": "Méthodes de paiement"
+    },
+    "duration": {
+      "title": "Durée",
+      "titleAllDay": "Validité",
+      "duration": "{{val}} heure",
+      "durations": "{{val}} heures",
+      "durationAllDay": "{{val}} journée"
+    },
+    "mobileTicket": {
+      "title": "Ticket mobile accepté",
+      "description": "Utilisez votre téléphone ou imprimez le bon"
+    },
+    "confirmation": {
+      "title": "Confirmation de réservation immédiate",
+      "description": "Pas de frais de réservation"
+    },
+    "queue": {
+      "title": "Ne fais pas la queue"
+    },
+    "cancel": {
+      "title": "Annulation facile",
+      "description": "Remboursement intégral en cas d'annulation jusqu'à 24h avant le début du cours"
+    },
+    "meetingPoint": {
+      "title": "Point de rencontre"
+    },
+    "discount": {
+      "title": "Remise"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto 0 auto;
+}
+.body {
+  width: 100%;
+  text-align: center;
+}
+.title {
+  font-size: 18px;
+  margin: 24px auto 0;
+  max-width: 370px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.discoverButton {
+  width: 100%;
+  margin-top: 24px;
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
+}
+.help {
+  text-align: center;
+  margin-top: 18px;
+  width: 100%;
+  span {
+    color: #FE504F;
+    cursor: pointer;
+  }
+}

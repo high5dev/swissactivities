@@ -1,0 +1,544 @@
+.search {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(78, 78, 78, 0.5);
+  z-index: 100;
+  padding: 20px;
+  overflow: hidden;
+
+  @media(max-width: 768px) {
+    overflow: auto;
+    padding: 0;
+    background: #fff;
+    height: 100%;
+  }
+
+  hr {
+    background: #eee !important;
+    @media (max-width: 768px) {
+      margin: 10px 0;
+    }
+  }
+
+  h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3b3b3b;
+    padding-left: 8px;
+    margin: 0px 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3b3b3b;
+    margin: 10px 0;
+    padding-bottom: 5px;
+    padding-left: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3b3b3b;
+    margin: 10px 0;
+    padding-bottom: 5px;
+  }
+}
+
+.results {
+  flex-grow: 1;
+  max-width: 75%;
+
+  .resultHits {
+    display: flex;
+
+    .title{
+      font-weight: 600;
+      font-size: 20px;
+      margin: 0 0 0 15px;
+      padding-bottom: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+
+    .resultHits {
+      display: block;
+    }
+  }
+}
+
+
+.categoryDetails {
+  max-width: 100% !important;
+  background-color: transparent;
+}
+
+.inputRow {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+  position: relative;
+  margin: -1px 5px 0 0;
+  width: 70%;
+  max-width: 600px;
+
+  @media (max-width: 512px) {
+    width: 80%;
+  }
+
+  .icon {
+    color: #3C6E71;
+  }
+}
+
+.container {
+  position: relative;
+
+  &.fullWidth {
+    width: 100%;
+  }
+}
+
+.inputContainer {
+  background: #F4F4F4;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  outline: none;
+
+  transition-duration: 50ms;
+  padding: 10px;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid rgba(254, 80, 79, 0.3);
+  }
+  &:focus, &:active {
+    border: 1px solid #FE504F;
+  }
+
+  @media (max-width: 512px) {
+    margin-right: 0;
+  }
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: -1px 5px 0 5px;
+  width: 100%;
+}
+.inputPopover {
+  left: 0px;
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px 2px rgb(0, 0, 0, 0.1);
+  transform: translateY(100vh);
+  transition-duration: 0ms;
+  transition-delay: 100ms;
+  opacity: 0;
+  border-bottom: 1px solid #bdbdbd;
+
+  @media (min-width: 767px) {
+    opacity: 0;
+    transform: translateX(-100vw);
+    width: calc(100% + 40px);
+    padding-right: 10px;
+    border-radius: 2px;
+  }
+
+  &.inputPopoverVisible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+    transition-duration: 200ms;
+  }
+}
+
+.search__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: auto;
+  height: 100%;
+  position: relative;
+
+  @media (max-width: 512px) {
+    margin: 0;
+    overflow: initial;
+    padding: 0;
+  }
+}
+
+.row {
+  width: 100%;
+  padding: 20px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: flex-start;
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &[data-visible="desktop"] {
+      display: none;
+    }
+  }
+}
+
+.filterTags {
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+}
+
+.filterTag {
+  margin-top: 1px;
+}
+
+.filterTagLabel {
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search_box {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 0;
+
+  @media (max-width: 768px) {
+    button {
+      width: 20%;
+      margin: 0 10px;
+      border: unset;
+      background: unset;
+      color: #999;
+      padding: 11px 0;
+    }
+  }
+
+}
+
+.divider__vertical {
+  width: 0px;
+  max-width: 1%;
+  margin: 0 0px;
+  background: #ffffff;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.btn {
+  cursor: pointer;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 27px;
+  color: #ffffff;
+  padding: 4px 26px;
+  background-color: #003049;
+  border-radius: 4px;
+}
+
+.filtersColumn {
+  display: flex;
+  border: 1px solid #3C6E71;
+  flex-direction: column;
+  width: 280px;
+  min-width: 280px;
+
+  @media(max-width: 768px) {
+    max-width: 100%;
+    width: auto;
+  }
+
+  &.withMaxHeight {
+    max-height: 700px;
+    .filters {
+      overflow-y: auto;
+      height: 100%;
+    }
+  }
+}
+
+.filters {
+  padding-top: 5px;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+.categories {
+  margin: 0;
+  background: #fff;
+}
+
+.activities {
+  width: 65%;
+  background: #ffffff;
+
+}
+
+.listings {
+  margin: 0 0px;
+  background: #ffffff;
+  width: 35%;
+  @media (max-width: 768px) {
+      padding: 5px
+  }
+}
+
+.categories, .activities, .listings {
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    h3 {
+      text-align: start !important;
+      font-size: 13px !important;
+      color: #000 !important;
+      margin: 10px 0 !important;
+      padding: 10px 16px !important;
+      background: #eee !important;
+    }
+  }
+}
+
+.image {
+  div {
+    margin: 0 5px;
+  }
+  span {
+    margin: 0 5px;
+  }
+}
+
+div.modal {
+  transform: translateX(-50%);
+  top: -3px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #003049;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+
+  .modalContainer {
+    max-width: 101vw;
+    height: 101vh;
+    overflow-y: auto;
+
+    button[class*="btn"] {
+      margin: 20px 0 0 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  padding: 14px 10px 0 10px;
+  z-index: 101;
+  text-align: center;
+  border-bottom: 1px solid #999;
+  font-size: 14px;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  span {
+    float: right;
+    position: relative;
+    top: -9px;
+    right: -5px;
+    padding: 12px;
+  }
+
+  &>div {
+    color: #fe504f;
+    float: left;
+    position: relative;
+    top: -9px;
+    padding: 12px;
+    font-weight: bold;
+  }
+}
+
+.topBar {
+  display: flex;
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  z-index: 3;
+  border-radius: 50%;
+  background-color: #ccc;
+
+  @media (max-width: 768px) {
+    position: static;
+    display: flex;
+    border-radius: unset;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 10px;
+    background-color: #fff;
+  }
+
+  .logo {
+    cursor: pointer;
+
+    a{
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 100px;
+    }
+  }
+}
+
+.closeIcon {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+
+  @media (max-width: 768px) {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+    svg{
+      width: 35px ;
+      height: 35px ;
+    }
+  }
+}
+.mapContainer {
+  position: relative;
+  width: 100%;
+  margin-left: 2px;
+
+  @media(max-width: 768px) {
+    height: 100vh;
+    margin: 0;
+  }
+
+  .closeMapIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    padding: 2px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #ededed;
+  }
+}
+.mobileFilterButton {
+  background-color: #FF4F4E;
+  bottom: 50px;
+  border: 0;
+  color: #fff;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  font-weight: 500;
+  font-size: 16px;
+
+  min-width: 160px;
+  border-radius: 2px;
+
+  @media(max-width: 768px) {
+    display: block;
+  }
+}
+.mapActivities {
+  width: 100%;
+  overflow: auto;
+  padding: 0 5px;
+  margin-top: 2px;
+  min-height: 360px;
+  height: 100%;
+  @media(max-width: 768px) {
+    display: none;
+  }
+
+  .activityContainer{
+    background-color: #fff;
+    margin: 10px 0;
+    width: 100%;
+    min-width: 120px;
+  }
+}
+.desktopMapButton {
+  margin: 0px;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+
+  .GimmickMap {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mainWrap{
+  position: relative;
+}
+
+.viewMoreBtn{
+  background-color: unset;
+  border: none;
+  outline: none;
+  color: #fe504f;
+  text-align: center;
+  margin: 10px auto ;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+}

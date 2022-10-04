@@ -1,0 +1,297 @@
+.activityContainer {
+  width: 300px;
+  min-width: 300px;
+  border-radius: 8px;
+
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 14px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%), 0 2px 2px rgb(0 0 0 / 5%), 0 4px 4px rgb(0 0 0 / 5%), 0 6px 8px rgb(0 0 0 / 5%), 0 8px 16px rgb(0 0 0 / 5%);
+  transition: transform .13s ease-in-out,-webkit-transform .13s ease-in-out;
+  transform: translateZ(0);
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: .5rem;
+    box-shadow: 0 4px 2px rgb(0 0 0 / 5%), 0 8px 4px rgb(0 0 0 / 5%), 0 16px 8px rgb(0 0 0 / 5%);
+    transition: opacity .2s ease-in-out;
+  }
+
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    -webkit-transform: translate3d(0,-.25rem,0);
+    transform: translate3d(0,-.25rem,0);
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus-within{
+    &:after {
+      opacity: 1;
+    }
+  }
+
+
+
+  @media(max-width: 767px){
+    width: 100%;
+    max-width: 400px;
+    margin: 0 16px 24px 16px;
+    padding: 0;
+  }
+
+  .activityItemHeaderWrap{
+    position: relative;
+
+    .like{
+      z-index: 4;
+      fill: #fff;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      //background-color: rgba(0,0,0, 0.2);
+    }
+  }
+
+  .activityItemHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    max-height: 180px;
+    img {
+      transition: all .2s ease-in-out;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .activityImage{
+      width: 100%;
+      display: block;
+    }
+    .activityType{
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+      z-index: 2;
+    }
+
+    @media(max-width: 767px){
+       max-height: 235px;
+    }
+
+    @media(min-width: 400px) and (max-width: 767px){
+       max-height: 280px;
+    }
+
+  }
+  .activityDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #3B3B3B;
+    padding: 16px 14px 16px;
+    justify-content: space-between;
+    height: calc(100% - 165px);
+
+    .activityTitle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      line-height: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #3b3b3b;
+      padding-bottom: 10px;
+    }
+    .activityType {
+      width: 100%;
+    }
+
+    @media(max-width: 767px){
+      .activityType{
+        display: none;
+      }
+      .activityTitle {
+        margin-top: 0;
+        color: #000;
+      }
+    }
+  }
+  .activityFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.from {
+  font-size: 14px;
+  line-height: 1;
+  color: #888888;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.tag {
+
+  line-height: 18px;
+  padding: 4px 8px;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.bookNow {
+
+  background: #F7F7F7;
+  border-radius: 4px;
+  border: none;
+  color: #3B3B3B;
+  font-size: 14px;
+  padding: 4px;
+  line-height: 21px;
+  margin-top: 12px;
+  font-weight: 500;
+
+  @media (max-width: 767px) {
+    margin-top: 0;
+    background: unset;
+    &:hover {
+      background: transparent;
+      color: #3b3b3b;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:hover {
+      background: #b9b9b9;
+    }
+  }
+}
+
+.rightBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+    min-width: 84px;
+}
+
+.person{
+  color: #888;
+  line-height: 1;
+}
+
+.currency, .price {
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #000;
+
+  @media(max-width: 767px) {
+    font-weight: 600;
+    color: #000;
+    line-height: 1;
+    font-size: 18px;
+  }
+}
+
+.bookDate{
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & > div{
+    @media(min-width: 768px) {
+      display: none !important;
+    }
+  }
+}
+
+.rating{
+
+  & > div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    & > span{
+      margin-left: 5px;
+      font-size: 14px;
+      margin-top: 3px;
+      color: #333;
+      font-weight: 500;
+    }
+  }
+
+  .reviews{
+    font-size: 14px;
+    color: #888;
+  }
+
+  @media(max-width: 767px) {
+    display: none;
+  }
+
+}
+
+.ratingLine{
+  position: relative;
+  width: 90px;
+  height: 20px;
+
+  img{
+    position: relative;
+    z-index: 3;
+  }
+
+  .ratingGrayLine{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    z-index: 1;
+  }
+  .ratingYellowLine{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #ffd938;
+    z-index: 2;
+  }
+}
+

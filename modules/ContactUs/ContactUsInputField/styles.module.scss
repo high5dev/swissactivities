@@ -1,0 +1,32 @@
+.inputRow {
+  width: 100%;
+
+  position: relative;
+  padding-bottom: 20px;
+  &.error {
+    .inputLabel {
+      color: #ff385c;
+    }
+    .inputField {
+      border-color: #ff385c;
+    }
+  }
+}
+.inputLabel {
+  color: #262626;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+.inputField {
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 10px 0;
+  width: 100%;
+}
+

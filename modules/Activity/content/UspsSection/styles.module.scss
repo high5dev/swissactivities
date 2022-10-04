@@ -1,0 +1,26 @@
+@import "mixins";
+
+.usp {
+  width: 49%;
+  margin-right: 1%;
+}
+
+.uspsSection {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #3B3B3B;
+
+  @include tablet-activity () {
+    margin-bottom: 0;
+    border-radius: 0;
+    padding-right: 0;
+  }
+
+  .uspsContent {
+    width: 100%;
+  }
+}

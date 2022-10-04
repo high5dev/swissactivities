@@ -1,0 +1,65 @@
+@import "mixins";
+
+.similarActivitiesSection {
+  width: 100%;
+  padding: 10px 0 30px;
+
+  @include tablet-activity() {
+    padding: 10px 22px 30px;
+  }
+
+  @include mobile {
+    padding: 10px 0 30px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3d3d3d;
+    padding: 10px 0;
+
+    @include mobile() {
+      padding: 10px 20px;
+    }
+  }
+
+  .similarActivity {
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.similarActivitiesListWrapper {
+  overflow-x: auto;
+
+  @include mobile() {
+    max-width: 100%;
+  }
+}
+
+.similarActivitiesList {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 100%;
+  padding: 20px 3px;
+  padding-left: 12px;
+  width: 100%;
+
+  @include mobile() {
+    width: fit-content;
+    padding: 5px 20px;
+  }
+}

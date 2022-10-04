@@ -1,0 +1,76 @@
+@import "mixins";
+
+.container {
+  background: #F7F7F7;
+  padding: 24px 80px;
+  min-height: 320px;
+
+  @include mobile() {
+    display: none;
+  }
+}
+
+.detailsCard {
+  color: #828282;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  border-radius: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .row {
+    display: flex;
+    margin-top: 12px;
+
+    .includesText {
+      margin-left: 5px;
+      padding-top: 0.1rem;
+    }
+    .highlightText {
+      padding-top: 0.1rem;
+    }
+  }
+
+  .column {
+    border-right: 1px solid #e5e5e5;
+    padding: 24px;
+    width: 50%;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    .title {
+      color: #3B3B3B;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+  }
+  .includedIconWrapper {
+    padding-top: 0.1rem;
+    height: 24px;
+  }
+  .viewAll {
+    color: #3b3b3b;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 12px;
+    text-decoration: underline;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.active {
+      color: #FF385C;
+    }
+  }
+  .icon {
+    min-width: 24px;
+    max-height: 24px;
+    object-fit: cover;
+  }
+}

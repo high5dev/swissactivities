@@ -1,0 +1,466 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .mt-header {
+    margin-top: var(--h-header);
+  }
+
+  .flow-text {
+    @apply space-y-3 lg:space-y-4;
+  }
+
+  .section {
+    @apply pt-10 md:pt-12 lg:pt-16 xl:pt-20 2xl:pt-24;
+  }
+
+  .section-last {
+    @apply mb-20;
+  }
+}
+
+:root {
+  --h-header: 62px;
+  --swiper-pagination-color: theme("colors.primary");
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --h-header: 80px;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.is-booking .app-container {
+  @apply flex min-h-screen flex-col overflow-x-hidden bg-gray-50;
+}
+
+body.is-booking footer {
+  @apply mt-auto;
+}
+
+.container-tw {
+  @apply mx-auto px-4;
+  max-width: 1344px;
+}
+
+.fade-in-card {
+  animation: fadeInCard ease-in 0.1s;
+  -webkit-animation: fadeInCard ease-in 0.1s;
+  -moz-animation: fadeInCard ease-in 0.1s;
+  -o-animation: fadeInCard ease-in 0.1s;
+  -ms-animation: fadeInCard ease-in 0.1s;
+}
+
+[data-tippy-root] {
+  @apply pointer-events-none;
+}
+
+.tippy-box {
+  @apply outline-none !important;
+}
+
+.image-wrapper > span {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.p {
+  @apply py-10 lg:py-16 xl:py-20;
+}
+
+.mt {
+  @apply mt-10 lg:mt-16 xl:mt-20;
+}
+
+.mb {
+  @apply mb-4 lg:mb-6;
+}
+
+.prose-sa {
+  @apply prose max-w-none break-words prose-p:text-sm prose-p:leading-relaxed prose-p:text-gray-600 prose-ul:text-sm prose-ul:leading-relaxed prose-ul:text-gray-600 prose-table:inline-block prose-table:max-w-full prose-table:overflow-x-auto prose-table:whitespace-nowrap prose-img:rounded-lg prose-p:lg:text-[15px] prose-ul:lg:text-[15px];
+}
+
+.form-select-sa {
+  @apply form-select max-w-full rounded-lg border border-solid border-gray-300 text-sm text-black focus:ring-0;
+}
+
+.color-info {
+  @apply bg-sky-100 text-sky-700;
+}
+
+.color-warning {
+  @apply bg-rose-100 text-rose-700;
+}
+
+.float {
+  @apply shadow rounded-lg !important;
+}
+
+.logo-grid span,
+.logo-grid span span {
+  @apply justify-self-center w-32 h-20 !important;
+}
+
+.logo-grid img {
+  @apply w-full h-full object-contain !important;
+}
+
+.logo-grid .infinite img {
+  @apply p-4 !important;
+}
+
+.shadow-border {
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+#crisp-chatbox > div > div + a {
+  @apply hidden !important;
+}
+
+/* Algolia search components */
+
+.ais-SearchBox.is-focus + div {
+  @apply lg:grid;
+}
+
+.ais-SearchBox-reset {
+  @apply right-3;
+}
+
+.ais-Hits-list {
+  @apply m-0 flex w-full flex-col p-0;
+}
+
+.ais-Hits-item {
+  @apply m-0 w-full border-none p-0 shadow-none;
+}
+
+.ais-SearchBox-submitIcon {
+  @apply h-4 w-4;
+}
+
+.ais-RatingMenu-label,
+.ais-RatingMenu-count {
+  @apply text-sm text-gray-900;
+}
+
+.ais-RatingMenu-starIcon {
+  @apply h-5 w-5 lg:h-5 lg:w-4;
+}
+
+.ais-SortBy-select {
+  @apply form-select max-w-full rounded-lg border border-solid border-gray-300 text-sm text-black focus:ring-0;
+}
+
+.ais-SearchBox-submitIcon path,
+.ais-SearchBox-resetIcon path {
+  @apply fill-blue !important;
+}
+
+.ais-GeoSearch-control {
+  @apply absolute top-4 left-1/2 -translate-x-1/2 transform;
+}
+
+.ais-GeoSearch-redo {
+  @apply border-none rounded-full bg-white px-4 py-1.5 text-sm font-medium text-gray-900 shadow transition duration-200 ease-in hover:shadow-md !important;
+}
+
+.ais-GeoSearch-redo--disabled {
+  @apply text-gray-900/30 opacity-100 !important;
+}
+
+.ais-GeoSearch,
+.ais-GeoSearch-map {
+  @apply h-full relative;
+}
+
+.ais-RatingMenu-list {
+  @apply space-y-1;
+}
+
+.ais-RatingMenu-starIcon {
+  @apply text-orange-400 fill-current;
+}
+
+.ais-RatingMenu-link {
+  @apply flex items-center space-x-1;
+}
+
+.ais-RatingMenu-label {
+  @apply ml-3 mr-1 !important;
+}
+
+.ais-RatingMenu-count {
+  @apply ml-2 rounded-sm bg-gray-50 py-0.5 px-1.5 text-xs font-medium text-gray-800
+}
+
+/* React Player */
+
+.react-player > div {
+  @apply w-full max-w-full !important;
+}
+
+/* Calendar */
+
+.react-calendar {
+  @apply mt-4 overflow-hidden rounded border-none text-black;
+}
+
+.react-calendar button {
+  @apply text-black;
+}
+
+.react-calendar__navigation {
+  @apply divide-x divide-gray-300;
+}
+
+.react-calendar__navigation > * {
+  border-right: none !important;
+}
+
+.react-calendar .react-calendar__navigation__label__labelText {
+  @apply relative top-px border-none text-sm font-medium;
+}
+
+.react-calendar .react-calendar__navigation__arrow {
+  border-top: none;
+  @apply flex items-center justify-center py-2 text-lg;
+}
+
+.react-calendar__navigation__prev-button {
+  border-left: none !important;
+}
+
+.react-calendar .react-calendar__tile {
+  @apply flex h-11 items-center justify-center rounded-md leading-6 lg:leading-8;
+}
+
+.react-calendar .react-calendar__tile:disabled {
+  @apply text-gray-500;
+}
+
+.react-calendar .react-calendar__tile:not(:disabled) {
+  @apply bg-emerald-100 font-medium text-gray-900 hover:bg-emerald-200;
+}
+
+.react-calendar.booking .react-calendar__navigation__prev-button,
+.react-calendar.booking .react-calendar__navigation__next-button {
+  @apply p-0 !important;
+}
+
+.react-calendar.booking.cant-back .react-calendar__navigation__prev-button {
+  @apply pointer-events-none;
+}
+
+.react-calendar.booking
+.react-calendar__navigation
+.react-calendar__navigation__label {
+  @apply border-b border-gray-200;
+  border-width: 1px !important;
+  border-top: none;
+}
+
+.react-calendar.booking
+.react-calendar__navigation
+.react-calendar__navigation__prev-button,
+.react-calendar.booking
+.react-calendar__navigation
+.react-calendar__navigation__next-button {
+  @apply border border-gray-200;
+}
+
+/*
+.react-calendar .react-calendar__tile--active {
+    @apply bg-primary text-white !important;
+}
+ */
+
+.react-calendar__navigation__arrow {
+  @apply hover:bg-gray-100 !important;
+}
+
+/* Swiper Search */
+
+.search-swiper .swiper-container {
+  @apply mx-0 w-full !important;
+}
+
+.search-swiper .swiper-button-next,
+.search-swiper .swiper-button-prev {
+  @apply top-1/2 z-20 mt-0 flex h-full h-12 w-12 -translate-y-1/2 transform from-white text-gray-900 transition duration-100 ease-in hover:text-primary !important;
+}
+
+.search-swiper .swiper-button-next:before,
+.search-swiper .swiper-button-prev:before {
+  content: "";
+  @apply pointer-events-none absolute z-[-1] h-full w-8 justify-start from-white pl-4 sm:w-16 lg:w-28;
+}
+
+.search-swiper .swiper-button-next:after,
+.search-swiper .swiper-button-prev:after {
+  @apply hidden text-sm sm:block !important;
+}
+
+.search-swiper .swiper-button-prev {
+  @apply left-0 justify-start bg-gradient-to-r pl-4;
+}
+
+.search-swiper .swiper-button-prev:before {
+  @apply left-0 bg-gradient-to-r;
+}
+
+.search-swiper .swiper-button-next {
+  @apply right-0 justify-end bg-gradient-to-l pr-2;
+}
+
+.search-swiper .swiper-button-next:before {
+  @apply right-0 bg-gradient-to-l;
+}
+
+.search-swiper .swiper-button-disabled {
+  @apply hidden !important;
+}
+
+/* Swiper Marker */
+
+.marker-swiper .swiper-button-next,
+.marker-swiper .swiper-button-prev {
+  @apply absolute top-1/2 mt-0 flex h-8 w-8 -translate-y-1/2 items-center rounded-full bg-white text-black shadow-md transition duration-100 ease-in hover:bg-primary hover:text-white !important;
+}
+
+.marker-swiper .swiper-button-next {
+  @apply -right-5 sm:-right-4;
+}
+
+.marker-swiper .swiper-button-prev {
+  @apply -left-5 sm:-left-4;
+}
+
+.marker-swiper .swiper-button-next:after,
+.marker-swiper .swiper-button-prev:after {
+  @apply relative text-sm !important;
+}
+
+.marker-swiper .swiper-button-next:after {
+  @apply -right-0.5;
+}
+
+.marker-swiper .swiper-button-prev:after {
+  @apply -left-0.5;
+}
+
+/* Swiper Default */
+
+.swiper-default .swiper-slide > span,
+.swiper-default .swiper-slide > span > span {
+  @apply h-full !important;
+}
+
+.swiper-default .swiper-button-next,
+.swiper-button-next-default,
+.swiper-default .swiper-button-prev,
+.swiper-button-prev-default {
+  @apply absolute top-1/2 z-20 mt-0 flex h-8 w-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-solid border-gray-300 bg-white font-semibold text-black shadow-md transition duration-100 ease-in hover:border-primary hover:bg-primary hover:text-white;
+}
+
+.swiper-button-next-default,
+.swiper-button-prev-default {
+  @apply static left-0 right-0 translate-y-0 shadow-none !important;
+}
+
+.swiper-default .swiper-button-next,
+.swiper-button-next-default {
+  @apply right-4;
+}
+
+.swiper-default .swiper-button-prev,
+.swiper-button-prev-default {
+  @apply left-4;
+}
+
+.swiper-default .swiper-button-next:after,
+.swiper-button-next-default:after,
+.swiper-default .swiper-button-prev:after,
+.swiper-button-prev-default:after {
+  font-family: swiper-icons, serif;
+  font-size: var(--swiper-navigation-size);
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+  @apply relative text-sm !important;
+}
+
+.swiper-default .swiper-button-next:after,
+.swiper-button-next-default:after {
+  content: "next";
+  @apply -right-0.5;
+}
+
+.swiper-default .swiper-button-prev:after,
+.swiper-button-prev-default:after {
+  content: "prev";
+  @apply -left-0.5;
+}
+
+/* Swiper Gradient Right */
+
+.swiper-gradient-right:after {
+  content: "";
+  @apply absolute top-0 z-10 h-full w-16;
+}
+
+.swiper-gradient-right .swiper-button-next,
+.swiper-gradient-right .swiper-button-prev {
+  @apply hidden md:flex !important;
+}
+
+.swiper-gradient-right:after {
+  @apply right-0 bg-gradient-to-l from-white;
+}
+
+/* Telefon input */
+
+.react-tel-input .form-control[type="tel"] {
+  margin-left: 39px !important;
+  height: 42px !important;
+  width: calc(100% - 39px) !important;
+  @apply text-black form-input rounded-lg rounded-l-none border border-solid border-gray-300 pl-4 text-base text-black focus:ring-0 !important;
+}
+
+.is-valid .react-tel-input .form-control[type="tel"] {
+  @apply border-green-600 !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-right: none !important;
+}
+
+.react-tel-input .flag-dropdown,
+.selected-flag {
+  @apply rounded-l-lg border-gray-300 !important;
+}
+
+.country-list {
+  @apply float;
+}
+
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country.highlight:hover {
+  @apply bg-gray-100 !important;
+}

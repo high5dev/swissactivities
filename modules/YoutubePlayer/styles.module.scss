@@ -1,0 +1,13 @@
+
+.playerWrapper {
+  height: 360px;
+}
+
+.player {
+  margin-top: 12px;
+  max-width: 100%;
+  width: 100% !important;
+  @media (max-width: 512px) {
+    width: 100% !important;
+  }
+}

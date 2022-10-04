@@ -1,0 +1,110 @@
+
+.searchBox{
+  width: 100%;
+  font-size: 14px;
+  padding: 15px;
+  background: #002f49;
+  border: 0;
+
+  .icon {
+    color: #002f49;
+  }
+
+  .title{
+    color: #fff;
+    font-size: 20px;
+    padding-left: 0px
+  }
+
+  .description {
+    color: #fff;
+    margin: 10px 0 5px;
+  }
+}
+
+.searchBoxContent{
+  border-radius: 4px;
+  box-shadow: 0 0 3px 1px #363636;
+}
+.inputRow {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  font-size: 16px;
+
+  .visible {
+    display: flex;
+  }
+}
+.searchWrapper{
+  width: 100%;
+  border: 0;
+}
+.searchInput{
+  width: 100%;
+  font-size: 16px;
+  background: #fff;
+  padding: 5px 0px;
+  border-radius: 0;
+  border: 0;
+  &:focus, &:active, &:hover {
+    border: 0;
+  }
+}
+
+.options {
+  background: #e6e6e6;
+  width: 100%;
+  padding: 10px 0;
+  flex-basis: 50%;
+  display: flex;
+}
+.optionsSection {
+  width: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.optionsContent {
+  margin-left: 5px;
+}
+
+.calendarRow {
+  display: flex;
+}
+.dateRow {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+
+  .date {
+    margin-left: 10px;
+    line-height: 1;
+    color: #4a4a4a;
+  }
+
+}
+.calendarContainer {
+  background: #fff;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.selectedCategory {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: #fff;
+  padding-left: 5px;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+}

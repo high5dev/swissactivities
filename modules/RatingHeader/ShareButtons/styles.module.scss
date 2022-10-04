@@ -1,0 +1,38 @@
+
+.shareContainer {
+  display: flex;
+
+  .shareButton {
+    margin: 0 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active, &:target {
+      opacity: 0.5;
+    }
+
+    &:first-child{
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .copyButton {
+    @extend .shareButton;
+    border: 1px solid #3b3b3b;
+    height: 29px;
+    width: 29px;
+    padding: 0;
+    background: #3b3b3b;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}

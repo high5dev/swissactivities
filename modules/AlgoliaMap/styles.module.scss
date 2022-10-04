@@ -1,0 +1,103 @@
+.container {
+  height: 700px;
+  width: 100%;
+
+  @media(max-width: 768px) {
+    height: 100vh;
+  }
+
+  .hit {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px;
+    padding-right: 5px;
+    width: 300px;
+    white-space: initial;
+    position: absolute;
+  }
+  .multipleHits {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px;
+    padding-right: 5px;
+    width: 300px;
+    white-space: initial;
+    position: absolute;
+    z-index: 2;
+
+    .multipleHitsTopbar {
+      font-size: 24px;
+      text-align: right;
+      line-height: 1;
+
+      .closeIcon {
+        cursor: pointer;
+      }
+    }
+
+    .hitItem {
+      display: flex;
+      list-style: none;
+      padding: 5px;
+      align-items: center;
+      font-size: 14px;
+      max-width: 100%;
+      cursor: pointer;
+      padding-top: 0;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      div{
+        min-width: 30px;
+      }
+
+      .hitTitle{
+        padding-left: 5px;
+      }
+    }
+  }
+  .iconMarker {
+    background: #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    text-align: center;
+    transform: translateY(-7px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+    	top: 75%;
+    	left: 50%;
+    	border: solid transparent;
+    	content: "";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(253, 250, 255, 0);
+    	border-top-color: #fff;
+    	border-width: 12px;
+    	margin-left: -12px;
+    }
+  }
+}
+.customMarker {
+  z-index: auto !important;
+}
+.booking {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  width: 485px;
+  max-width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}
